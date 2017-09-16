@@ -1,0 +1,119 @@
+version: 1
+
+dn: dc=kontextwork-test,dc=de
+objectClass: organization
+objectClass: dcObject
+objectClass: top
+dc: kontextwork-test
+o: Kontextwork-Test
+
+dn: cn=admin,dc=kontextwork-test,dc=de
+objectClass: organizationalRole
+objectClass: simpleSecurityObject
+cn: admin
+userPassword:: e1NTSEF9aHZIc29PMXN4TDFBak9Nc3ZSMDU2YVNTT01FcllyYXk=
+description: LDAP administrator
+
+dn: ou=groups,dc=kontextwork-test,dc=de
+objectClass: organizationalUnit
+objectClass: top
+ou: groups
+
+dn: ou=accounts,dc=kontextwork-test,dc=de
+objectClass: organizationalUnit
+objectClass: top
+ou: accounts
+
+dn: cn=drupalwiki,ou=groups,dc=kontextwork-test,dc=de
+objectClass: groupOfUniqueNames
+objectClass: top
+cn: drupalwiki
+uniqueMember: cn=included1,ou=accounts,dc=kontextwork-test,dc=de
+uniqueMember: cn=included2,ou=accounts,dc=kontextwork-test,dc=de
+uniqueMember: cn=included3,ou=accounts,dc=kontextwork-test,dc=de
+
+dn: cn=included1,ou=accounts,dc=kontextwork-test,dc=de
+objectClass: mailAccount
+objectClass: shadowAccount
+objectClass: person
+objectClass: simpleSecurityObject
+objectClass: posixAccount
+objectClass: top
+cn: included1
+gidNumber: 1
+homeDirectory: /home/inc1
+mail: included1@kontextwork-test.de
+sn: Eugen1
+uid: 1
+uidNumber: 1
+userPassword:: e3NzaGF9RVBnaXg2NkJXbEZ2elFmUUZGT1RPamkzVGlDaGw5Uml4b1FWZnc9P
+ Q==
+
+dn: cn=included2,ou=accounts,dc=kontextwork-test,dc=de
+objectClass: mailAccount
+objectClass: shadowAccount
+objectClass: person
+objectClass: simpleSecurityObject
+objectClass: posixAccount
+objectClass: top
+cn: included2
+gidNumber: 2
+homeDirectory: /home/inc2
+mail: included2@kontextwork-test.de
+sn: Eugen2
+uid: 2
+uidNumber: 2
+userPassword:: e3NzaGF9TTdkbDJqci9Ja1dLbHoxQStHeTc2NTN1WFhxclNuVzR4S1MwZWc9P
+ Q==
+
+dn: cn=included3,ou=accounts,dc=kontextwork-test,dc=de
+objectClass: mailAccount
+objectClass: shadowAccount
+objectClass: person
+objectClass: simpleSecurityObject
+objectClass: posixAccount
+objectClass: top
+cn: included3
+gidNumber: 3
+homeDirectory: /home/inc3
+mail: included3@kontextwork-test.de
+sn: Eugen3
+uid: 3
+uidNumber: 3
+userPassword:: e3NzaGF9eXVBZ0pHcm1pR085V0FxSjFFT1MzRGxkWEE5NHFrNTNlQzFXUkE9P
+ Q==
+
+dn: cn=excluded1,ou=accounts,dc=kontextwork-test,dc=de
+objectClass: mailAccount
+objectClass: shadowAccount
+objectClass: person
+objectClass: simpleSecurityObject
+objectClass: posixAccount
+objectClass: top
+cn: excluded1
+gidNumber: 4
+homeDirectory: /home/excl1
+mail: excluded1@kontextwork-test.de
+sn: Eugen1
+uid: 4
+uidNumber: 4
+userPassword:: e3NzaGF9RjBJZjNhTCsvZXE4SEwxQVRqTGxhUTRQNmUrVFgwUzI3RXVUd2c9P
+ Q==
+
+dn: cn=excluded2,ou=accounts,dc=kontextwork-test,dc=de
+objectClass: mailAccount
+objectClass: shadowAccount
+objectClass: person
+objectClass: simpleSecurityObject
+objectClass: posixAccount
+objectClass: top
+cn: excluded2
+gidNumber: 5
+homeDirectory: /home/excl2
+mail: excluded2@kontextwork-test.de
+sn: Eugen1
+uid: 5
+uidNumber: 5
+userPassword:: e3NzaGF9UExrZk8xUlNnTUN0b0RDeUVwMFMxSy9lUkRUWlZaOUVIclpxL0E9P
+ Q==
+
