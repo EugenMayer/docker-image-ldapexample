@@ -4,7 +4,7 @@
 
 the exposed port is 389, so to start do
 
-`docker run --name testldap -p 389:389 registry.kw.kontextwork.com/kw/ldapexample`
+`docker run --name testldap -p 389:389 eugenmayer/ldapexample`
 
 And then connect using `localhost:389` - not SSL/TLS with the user / password you see under admin below
 
