@@ -1,4 +1,4 @@
-## 
+## WAT
 
 If you need to test-drive your ldap authentication or need a test-server to test your ldap against, this docker-image could be of use. It does come with predeployed users and groups so you can test authentication and filters right away.
 
