@@ -31,6 +31,7 @@ cn: drupalwiki
 uniqueMember: cn=included1,ou=accounts,dc=kontextwork-test,dc=de
 uniqueMember: cn=included2,ou=accounts,dc=kontextwork-test,dc=de
 uniqueMember: cn=included3,ou=accounts,dc=kontextwork-test,dc=de
+uniqueMember: cn=included4,ou=other_accounts,dc=kontextwork-test,dc=de
 
 dn: cn=included1,ou=accounts,dc=kontextwork-test,dc=de
 objectClass: ipHost
@@ -122,3 +123,29 @@ uid: 5
 uidNumber: 5
 userPassword:: e3NzaGF9UExrZk8xUlNnTUN0b0RDeUVwMFMxSy9lUkRUWlZaOUVIclpxL0E9P
  Q==
+
+
+dn: ou=other_accounts,dc=kontextwork-test,dc=de
+objectClass: organizationalUnit
+objectClass: top
+ou: other_accounts
+
+dn: cn=included4,ou=other_accounts,dc=kontextwork-test,dc=de
+objectClass: ipHost
+objectClass: mailAccount
+objectClass: shadowAccount
+objectClass: person
+objectClass: simpleSecurityObject
+objectClass: posixAccount
+objectClass: top
+cn: included4
+gidNumber: 4
+homeDirectory: /home/inc4
+ipHostNumber: 172.16.0.104/24
+mail: included3@kontextwork-test.de
+sn: Eugen3
+uid: 4
+uidNumber: 4
+userPassword:: e1NTSEF9YlpRVTdKZ0Q4SnB0Q016UmxwSlBNT3FkWEF0ZnU3SlUyeEszc3c9P
+ Q==
+
