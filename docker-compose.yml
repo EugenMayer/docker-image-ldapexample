@@ -1,0 +1,11 @@
+version: "2"
+services:
+  ldap:
+    image: eugenmayer/ldapexample
+    # important so our TLS certificate includes our hostname
+    container_name: ldap
+    ports:
+      - 389:389
+    environment:
+      LDAP_TLS: 'true'
+      LDAP_TLS_VERIFY_CLIENT: 'never'

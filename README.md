@@ -10,6 +10,8 @@ the exposed port is 389, so to start do
 
 `docker run --name testldap -p 389:389 eugenmayer/ldapexample`
 
+or just `docker-compose up` right in here
+
 And then connect using `localhost:389` - not SSL/TLS with the user / password you see under admin below
 
 ## Admin
@@ -37,3 +39,7 @@ with the following members
 - cn=included2,ou=accounts,dc=kontextwork-test,dc=de
 - cn=included3,ou=accounts,dc=kontextwork-test,dc=de
 
+## build
+
+    make build
+    
