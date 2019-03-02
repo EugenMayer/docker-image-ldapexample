@@ -33,6 +33,7 @@ uniqueMember: cn=included2,ou=accounts,dc=kontextwork-test,dc=de
 uniqueMember: cn=included3,ou=accounts,dc=kontextwork-test,dc=de
 
 dn: cn=included1,ou=accounts,dc=kontextwork-test,dc=de
+objectClass: ipHost
 objectClass: mailAccount
 objectClass: shadowAccount
 objectClass: person
@@ -42,6 +43,7 @@ objectClass: top
 cn: included1
 gidNumber: 1
 homeDirectory: /home/inc1
+ipHostNumber: 172.16.0.101/24
 mail: included1@kontextwork-test.de
 sn: Eugen1
 uid: 1
@@ -50,6 +52,7 @@ userPassword:: e3NzaGF9RVBnaXg2NkJXbEZ2elFmUUZGT1RPamkzVGlDaGw5Uml4b1FWZnc9P
  Q==
 
 dn: cn=included2,ou=accounts,dc=kontextwork-test,dc=de
+objectClass: ipHost
 objectClass: mailAccount
 objectClass: shadowAccount
 objectClass: person
@@ -59,6 +62,7 @@ objectClass: top
 cn: included2
 gidNumber: 2
 homeDirectory: /home/inc2
+ipHostNumber: 172.16.0.102/24
 mail: included2@kontextwork-test.de
 sn: Eugen2
 uid: 2
@@ -67,6 +71,7 @@ userPassword:: e3NzaGF9TTdkbDJqci9Ja1dLbHoxQStHeTc2NTN1WFhxclNuVzR4S1MwZWc9P
  Q==
 
 dn: cn=included3,ou=accounts,dc=kontextwork-test,dc=de
+objectClass: ipHost
 objectClass: mailAccount
 objectClass: shadowAccount
 objectClass: person
@@ -76,6 +81,7 @@ objectClass: top
 cn: included3
 gidNumber: 3
 homeDirectory: /home/inc3
+ipHostNumber: 172.16.0.103/24
 mail: included3@kontextwork-test.de
 sn: Eugen3
 uid: 3
@@ -116,4 +122,3 @@ uid: 5
 uidNumber: 5
 userPassword:: e3NzaGF9UExrZk8xUlNnTUN0b0RDeUVwMFMxSy9lUkRUWlZaOUVIclpxL0E9P
  Q==
-
