@@ -4,6 +4,8 @@ services:
     image: eugenmayer/ldapexample
     # important so our TLS certificate includes our hostname
     container_name: ldap
+    volumes:
+      - ./data:/var/lib/ldap
     ports:
       - 389:389
     environment:
