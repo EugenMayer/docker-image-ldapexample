@@ -42,4 +42,11 @@ with the following members
 ## build
 
     make build
+
+## Update data
+
+1. start the image with the container name `ldap`
+2. Connect to the ldap server and change what you need
+3. `docker cp ldap:/var/lib/ldap/. data/`
+4. `make build`
     
