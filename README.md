@@ -41,7 +41,7 @@ See the connection details under layout.
 - uid=user1,ou=base1,ou=accounts,<LDAP_BASE_DN>
 - uid=user1,ou=base1,ou=accounts,<LDAP_BASE_DN>
 - uid=userExcluded1,ou=base1,ou=accounts,<LDAP_BASE_DN>
-- uid=user1,ou=base2,ou=accounts,<LDAP_BASE_DN>
+- uid=included1,ou=base2,ou=accounts,<LDAP_BASE_DN>
 
 Passwords do match the the `uid`, so `user1` for the user `uid=user1,ou=accounts,<LDAP_BASE_DN>` and so on.
 
@@ -53,9 +53,9 @@ We have one group
 
 with the following members
 
-- uid=included1,ou=base1,ou=accounts,<LDAP_BASE_DN>
-- uid=included2,ou=base1,ou=accounts,<LDAP_BASE_DN>
-- uid=included3,ou=base1,ou=accounts,<LDAP_BASE_DN>
+- uid=user1,ou=base1,ou=accounts,<LDAP_BASE_DN>
+- uid=user2,ou=base1,ou=accounts,<LDAP_BASE_DN>
+- uid=included3,ou=base2,ou=accounts,<LDAP_BASE_DN>
 
 ### Type 2 Template
 
@@ -64,8 +64,10 @@ with the following members
 - uid=included1,ou=base1,ou=accounts,<LDAP_BASE_DN>
 - uid=included2,ou=base1,ou=accounts,<LDAP_BASE_DN>
 - uid=included3,ou=base1,ou=accounts,<LDAP_BASE_DN>
+- uid=includedMissingMail,ou=base1,ou=accounts,<LDAP_BASE_DN>
 - uid=excluded1,ou=base1,ou=accounts,<LDAP_BASE_DN>
 - uid=excluded2,ou=base1,ou=accounts,<LDAP_BASE_DN>
+- uid=included1,ou=base2,ou=accounts,<LDAP_BASE_DN>
 
 Passwords do match the the `uid`, so `included1` for the user `uid=included1,ou=accounts,<LDAP_BASE_DN>` and so on.
 
@@ -80,6 +82,7 @@ with the following members
 - uid=included1,ou=base1,ou=accounts,<LDAP_BASE_DN>
 - uid=included2,ou=base1,ou=accounts,<LDAP_BASE_DN>
 - uid=included3,ou=base1,ou=accounts,<LDAP_BASE_DN>
+- uid=includedMissingMail,ou=base1,ou=accounts,<LDAP_BASE_DN>
 
 ## build
 
