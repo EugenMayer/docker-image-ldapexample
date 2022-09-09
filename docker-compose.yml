@@ -1,7 +1,7 @@
 version: "3"
 services:
   ldap1:
-    image: osixia/openldap
+    image: osixia/openldap:1.5.0
     # important so our TLS certificate includes our hostname
     container_name: ldap1
     hostname: ldap1
@@ -18,7 +18,7 @@ services:
       LDAP_DOMAIN: example.org
       LDAP_ORGANISATION: Example Org
   ldap2:
-    image: osixia/openldap
+    image: osixia/openldap:1.5.0
     # important so our TLS certificate includes our hostname
     container_name: ldap2
     hostname: ldap2
@@ -34,3 +34,13 @@ services:
       LDAP_ADMIN_PASSWORD: 'admin'
       LDAP_DOMAIN: kontextwork-test.de
       LDAP_ORGANISATION: KontextWork
+      # FIXME: remove it is not needed to get memberOf up and running
+      # LDAP_RFC2307BIS_SCHEMA: true
+  ldap3:
+    image: eugenmayer/ldapexample
+    # important so our TLS certificate includes our hostname
+    ports:
+      - 30389:389
+    environment:
+      LDAP_TLS: 'true'
+      LDAP_TLS_VERIFY_CLIENT: 'never'

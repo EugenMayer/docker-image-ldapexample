@@ -1,4 +1,4 @@
-FROM osixia/openldap
+FROM osixia/openldap:1.5.0
 
 ARG TEMPLATE_PATH=./data-template-type1.ldif
 ARG LDAP_DOMAIN=example.org
