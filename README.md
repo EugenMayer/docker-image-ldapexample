@@ -81,3 +81,8 @@ with the following members
 
 You can build your images using your custom templates, custom password or LDAP_DOMAIN. See the `Dockerfile` included here
 and just make it your own, if you like. Also see the templates and see how you can adopt or modify them to your liking.
+
+## credits
+
+Well they all belong to [osixia/docker-openldap](https://github.com/osixia/docker-openldap) who did bring up this awesome
+ldap docker image in the first place!
