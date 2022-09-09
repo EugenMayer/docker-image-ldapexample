@@ -36,11 +36,3 @@ services:
       LDAP_ORGANISATION: KontextWork
       # FIXME: remove it is not needed to get memberOf up and running
       # LDAP_RFC2307BIS_SCHEMA: true
-  ldap3:
-    image: eugenmayer/ldapexample
-    # important so our TLS certificate includes our hostname
-    ports:
-      - 30389:389
-    environment:
-      LDAP_TLS: 'true'
-      LDAP_TLS_VERIFY_CLIENT: 'never'
