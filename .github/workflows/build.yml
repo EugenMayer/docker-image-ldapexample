@@ -1,4 +1,4 @@
-name: build-and-push
+name: build
 
 on: push
 
@@ -22,7 +22,7 @@ jobs:
           username: ${{ github.repository_owner }}
           password: ${{ github.token }}
       # push only on main
-      - name: Build and push type1
+      - name: Build type1
         uses: docker/build-push-action@v3
         with:
           context: .
@@ -33,7 +33,7 @@ jobs:
             ${{ env.IMAGE_FQDN }}:type1-${{ github.ref_name }}
           build-args: |
             TEMPLATE_FILE=./data-template-type1.ldif
-      - name: Build and push type2
+      - name: Build type2
         uses: docker/build-push-action@v3
         with:
           context: .
