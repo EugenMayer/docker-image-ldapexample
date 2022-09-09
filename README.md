@@ -6,11 +6,11 @@ If you need to test-drive your ldap authentication or need a test-server to test
 
 Using the include `docker-compose.yml`, you will have 2 servers started as an example, with 2 slightly different layous, based on `data-template-type1.ldif` and `data-template-type2.ldif`
 
-Server 1 has the port 1389 and the default domain example.org
+Server 1 has the port `10389` and the default domain example.org
 - admin user: `dc=admin,dc=example,dc=org`
 - admin password: `admin`
 
-Server 2 has the port 2389 and the default domain example.org
+Server 2 has the port `20389` and the default domain example.org
 - admin user: `dc=admin,dc=kontextwork-test,dc=dc`
 - admin password: `admin`
 

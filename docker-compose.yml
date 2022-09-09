@@ -9,7 +9,7 @@ services:
     volumes:
       - ./data-template-type1.ldif:/container/service/slapd/assets/config/bootstrap/ldif/50-bootstrap.ldif
     ports:
-      - 1389:389
+      - 10389:389
     environment:
       LDAP_TLS: 'true'
       LDAP_TLS_VERIFY_CLIENT: 'never'
@@ -26,7 +26,7 @@ services:
     volumes:
       - ./data-template-type2.ldif:/container/service/slapd/assets/config/bootstrap/ldif/50-bootstrap.ldif
     ports:
-      - 2389:389
+      - 20389:389
     environment:
       LDAP_TLS: 'true'
       LDAP_TLS_VERIFY_CLIENT: 'never'
