@@ -50,6 +50,7 @@ uidNumber: 1
 userPassword:: e1NTSEE1MTJ9TEdiTjdzU1ZVOHhPWjNFWDNYSTRsTkxrcWJDeVB5WjZlMUdqc
  2pDZkg2R2pWVTJ0dHUrUGdFcThpSGRUaWt5SUxMbVFza1c1T1RkMzlpNUhSc2F5OEx4T3JvbTc4
  bVdk
+mail: user1@maildomain.local
 
 dn: uid=user2,ou=accounts,ou=base1,{{ LDAP_BASE_DN }}
 objectClass: inetOrgPerson
@@ -58,6 +59,7 @@ objectClass: person
 objectClass: posixAccount
 objectClass: simpleSecurityObject
 objectClass: top
+mail: user2@maildomain.local
 cn: user2
 gidNumber: 2
 homeDirectory: /home/user
@@ -98,6 +100,7 @@ objectClass: posixAccount
 objectClass: simpleSecurityObject
 objectClass: top
 cn: included1
+mail: included1@maildomain.local
 gidNumber: 1
 homeDirectory: /home/user
 sn: Included1

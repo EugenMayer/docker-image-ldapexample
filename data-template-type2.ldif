@@ -34,6 +34,7 @@ cn: myservice
 uniqueMember: uid=included1,ou=accounts,ou=base1,{{ LDAP_BASE_DN }}
 uniqueMember: uid=included2,ou=accounts,ou=base1,{{ LDAP_BASE_DN }}
 uniqueMember: uid=included3,ou=accounts,ou=base1,{{ LDAP_BASE_DN }}
+uniqueMember: uid=included1,ou=accounts,ou=base2,{{ LDAP_BASE_DN }}
 
 dn: uid=included1,ou=accounts,ou=base1,{{ LDAP_BASE_DN }}
 objectClass: inetOrgPerson
@@ -42,6 +43,7 @@ objectClass: person
 objectClass: posixAccount
 objectClass: simpleSecurityObject
 objectClass: top
+mail: included1@maildomain.local
 cn: included1
 gidNumber: 1
 homeDirectory: /home/included1
@@ -58,6 +60,7 @@ objectClass: person
 objectClass: posixAccount
 objectClass: simpleSecurityObject
 objectClass: top
+mail: included2@maildomain.local
 cn: included2
 gidNumber: 2
 homeDirectory: /home/included2
@@ -67,7 +70,6 @@ uidNumber: 2
 userPassword:: e3NzaGF9TTdkbDJqci9Ja1dLbHoxQStHeTc2NTN1WFhxclNuVzR4S1MwZWc9P
  Q==
 
-
 dn: uid=included3,ou=accounts,ou=base1,{{ LDAP_BASE_DN }}
 objectClass: inetOrgPerson
 objectClass: organizationalPerson
@@ -75,12 +77,30 @@ objectClass: person
 objectClass: posixAccount
 objectClass: simpleSecurityObject
 objectClass: top
+mail: included3@maildomain.local
 cn: included3
 gidNumber: 3
 homeDirectory: /home/included3
 sn: Included3
 uid: included3
 uidNumber: 3
+userPassword:: e3NzaGF9eXVBZ0pHcm1pR085V0FxSjFFT1MzRGxkWEE5NHFrNTNlQzFXUkE9P
+ Q==
+
+
+dn: uid=includedMissingMail,ou=accounts,ou=base1,{{ LDAP_BASE_DN }}
+objectClass: inetOrgPerson
+objectClass: organizationalPerson
+objectClass: person
+objectClass: posixAccount
+objectClass: simpleSecurityObject
+objectClass: top
+cn: includedMissingMail
+gidNumber: 4
+homeDirectory: /home/includedMissingMail
+sn: includedMissingMail
+uid: includedMissingMail
+uidNumber: 4
 userPassword:: e3NzaGF9eXVBZ0pHcm1pR085V0FxSjFFT1MzRGxkWEE5NHFrNTNlQzFXUkE9P
  Q==
 
@@ -91,12 +111,13 @@ objectClass: person
 objectClass: posixAccount
 objectClass: simpleSecurityObject
 objectClass: top
+mail: excluded1@maildomain.local
 cn: excluded1
-gidNumber: 4
+gidNumber: 5
 homeDirectory: /home/excluded1
 sn: Excluded1
 uid: excluded1
-uidNumber: 4
+uidNumber: 5
 userPassword:: e3NzaGF9RjBJZjNhTCsvZXE4SEwxQVRqTGxhUTRQNmUrVFgwUzI3RXVUd2c9P
  Q==
 
@@ -107,12 +128,13 @@ objectClass: person
 objectClass: posixAccount
 objectClass: simpleSecurityObject
 objectClass: top
+mail: excluded2@maildomain.local
 cn: excluded2
-gidNumber: 5
+gidNumber: 6
 homeDirectory: /home/excluded2
 sn: Excluded2
 uid: excluded2
-uidNumber: 5
+uidNumber: 6
 userPassword:: e3NzaGF9RjBJZjNhTCsvZXE4SEwxQVRqTGxhUTRQNmUrVFgwUzI3RXVUd2c9P
  Q==
 
@@ -123,12 +145,13 @@ objectClass: person
 objectClass: posixAccount
 objectClass: simpleSecurityObject
 objectClass: top
+mail: excluded3@maildomain.local
 cn: excluded3
-gidNumber: 6
+gidNumber: 7
 homeDirectory: /home/excluded3
 sn: Excluded3
 uid: excluded3
-uidNumber: 6
+uidNumber: 7
 userPassword:: e3NzaGF9RjBJZjNhTCsvZXE4SEwxQVRqTGxhUTRQNmUrVFgwUzI3RXVUd2c9P
  Q==
 
@@ -144,6 +167,7 @@ objectClass: person
 objectClass: posixAccount
 objectClass: simpleSecurityObject
 objectClass: top
+mail: included1@maildomain.local
 cn: included1
 gidNumber: 1
 homeDirectory: /home/user

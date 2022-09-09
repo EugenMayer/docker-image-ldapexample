@@ -1,3 +1,6 @@
+[![build](https://github.com/EugenMayer/docker-image-ldapexample/actions/workflows/build.yml/badge.svg)](https://github.com/EugenMayer/docker-image-ldapexample/actions/workflows/build.yml) 
+[![build-and-push](https://github.com/EugenMayer/docker-image-ldapexample/actions/workflows/publish.yml/badge.svg)](https://github.com/EugenMayer/docker-image-ldapexample/actions/workflows/publish.yml)
+
 ## WAT
 
 If you need to test-drive your ldap authentication or need a test-server to test your ldap against, this docker-image could be of use. It does come with pre-deployed users and groups, so you can test authentication and filters right away.
@@ -40,7 +43,7 @@ See the connection details under layout.
 - uid=userExcluded1,ou=base1,ou=accounts,<LDAP_BASE_DN>
 - uid=user1,ou=base2,ou=accounts,<LDAP_BASE_DN>
 
-Passwords do match the the `cn`, so `user1` for the user `uid=user1,ou=accounts,<LDAP_BASE_DN>` and so on.
+Passwords do match the the `uid`, so `user1` for the user `uid=user1,ou=accounts,<LDAP_BASE_DN>` and so on.
 
 ## Groups
 
@@ -64,7 +67,7 @@ with the following members
 - uid=excluded1,ou=base1,ou=accounts,<LDAP_BASE_DN>
 - uid=excluded2,ou=base1,ou=accounts,<LDAP_BASE_DN>
 
-Passwords do match the the `cn`, so `included1` for the user `uid=included1,ou=accounts,<LDAP_BASE_DN>` and so on.
+Passwords do match the the `uid`, so `included1` for the user `uid=included1,ou=accounts,<LDAP_BASE_DN>` and so on.
 
 #### Groups
 
