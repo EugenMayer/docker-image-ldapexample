@@ -32,7 +32,7 @@ jobs:
             ${{ env.IMAGE_FQDN }}:type1
             ${{ env.IMAGE_FQDN }}:type1-${{ github.ref_name }}
           build-args: |
-            TEMPLATE_FILE=./data-template-type1.ldif
+            TEMPLATE_PATH=./data-template-type1.ldif
             LDAP_DOMAIN=example.org
       - name: Build type2
         uses: docker/build-push-action@v3
@@ -44,5 +44,5 @@ jobs:
             ${{ env.IMAGE_FQDN }}:type2
             ${{ env.IMAGE_FQDN }}:type2-${{ github.ref_name }}
           build-args: |
-            TEMPLATE_FILE=./data-template-type2.ldif
+            TEMPLATE_PATH=./data-template-type2.ldif
             LDAP_DOMAIN=kontextwork-test.de
