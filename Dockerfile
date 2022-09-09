@@ -1,8 +1,14 @@
 FROM osixia/openldap
 
-RUN rm -fr /var/lib/ldap && rm -fr /etc/ldap/slapd.d
+ARG TEMPLATE_PATH=./data-template-type1.ldif
+ARG LDAP_DOMAIN=example.org
 
-COPY ./data /var/lib/ldap
-COPY ./config /etc/ldap/slapd.d
+ENV LDAP_DOMAIN=$LDAP_DOMAIN
+ENV LDAP_TLS='true'
+ENV LDAP_TLS_VERIFY_CLIENT='never'
+ENV LDAP_ADMIN_PASSWORD="admin"
+COPY $TEMPLATE_PATH /container/service/slapd/assets/config/bootstrap/ldif/50-bootstrap.ldif
 
-RUN chown -R openldap:openldap /var/lib/ldap && chown -R openldap:openldap /etc/ldap/slapd.d
+RUN chown -R openldap:openldap /container/service/slapd/assets/config/bootstrap/ldif/50-bootstrap.ldif
+
+CMD ["--copy-service"]

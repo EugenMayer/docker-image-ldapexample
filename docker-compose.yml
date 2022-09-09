@@ -1,13 +1,36 @@
-version: "2"
+version: "3"
 services:
-  ldap:
-    image: eugenmayer/ldapexample
+  ldap1:
+    image: osixia/openldap
     # important so our TLS certificate includes our hostname
-    container_name: ldap
+    container_name: ldap1
+    hostname: ldap1
+    command: --copy-service
     volumes:
-      - ./data:/var/lib/ldap
+      - ./data-template-type1.ldif:/container/service/slapd/assets/config/bootstrap/ldif/50-bootstrap.ldif
     ports:
-      - 389:389
+      - 1389:389
     environment:
       LDAP_TLS: 'true'
       LDAP_TLS_VERIFY_CLIENT: 'never'
+      # ADMIN user will be: cn=admin,LDAP_DOMAN_AS_BASE_DN, so e.g.: cn=admin,
+      LDAP_ADMIN_PASSWORD: 'admin'
+      LDAP_DOMAIN: example.org
+      LDAP_ORGANISATION: Example Org
+  ldap2:
+    image: osixia/openldap
+    # important so our TLS certificate includes our hostname
+    container_name: ldap2
+    hostname: ldap2
+    command: --copy-service
+    volumes:
+      - ./data-template-type2.ldif:/container/service/slapd/assets/config/bootstrap/ldif/50-bootstrap.ldif
+    ports:
+      - 2389:389
+    environment:
+      LDAP_TLS: 'true'
+      LDAP_TLS_VERIFY_CLIENT: 'never'
+      # ADMIN user will be: cn=admin,LDAP_DOMAN_AS_BASE_DN, so e.g.: cn=admin,
+      LDAP_ADMIN_PASSWORD: 'admin'
+      LDAP_DOMAIN: kontextwork-test.de
+      LDAP_ORGANISATION: KontextWork
