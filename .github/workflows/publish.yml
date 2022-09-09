@@ -1,6 +1,9 @@
 name: build-and-push
 
-on: push
+on:
+  push:
+    tags:
+      - '*'
 
 env:
   IMAGE_FQDN: ghcr.io/eugenmayer/ldaptestserver
@@ -27,7 +30,7 @@ jobs:
         with:
           context: .
           platforms: linux/amd64
-          push: false
+          push: true
           tags: |
             ${{ env.IMAGE_FQDN }}:type1
             ${{ env.IMAGE_FQDN }}:type1-${{ github.ref_name }}
@@ -38,7 +41,7 @@ jobs:
         with:
           context: .
           platforms: linux/amd64
-          push: false
+          push: true
           tags: |
             ${{ env.IMAGE_FQDN }}:type2
             ${{ env.IMAGE_FQDN }}:type2-${{ github.ref_name }}
