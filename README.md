@@ -4,7 +4,7 @@ If you need to test-drive your ldap authentication or need a test-server to test
 
 ## Database layout
 
-Using the include `docker-compose.yml`, you will have 2 servers started as an example, with 2 slightly different layous, based on `data-template-type1.ldif` and `data-template-type2.ldif`
+Using `docker-compose.yml`, you will have 2 servers started as an example, with 2 slightly different layous, based on `data-template-type1.ldif` and `data-template-type2.ldif`
 
 Server 1 has the port `10389` and the default domain example.org
 - admin user: `dc=admin,dc=example,dc=org`
@@ -35,48 +35,48 @@ See the connection details under layout.
 ### Type 1 Template
 
 ## Users
-- cn=user1,ou=base1,ou=accounts,<LDAP_BASE_DN>
-- cn=user1,ou=base1,ou=accounts,<LDAP_BASE_DN>
-- cn=userExcluded1,ou=base1,ou=accounts,<LDAP_BASE_DN>
-- cn=user1,ou=base2,ou=accounts,<LDAP_BASE_DN>
+- uid=user1,ou=base1,ou=accounts,<LDAP_BASE_DN>
+- uid=user1,ou=base1,ou=accounts,<LDAP_BASE_DN>
+- uid=userExcluded1,ou=base1,ou=accounts,<LDAP_BASE_DN>
+- uid=user1,ou=base2,ou=accounts,<LDAP_BASE_DN>
 
-Passwords do match the the `cn`, so `user1` for the user `cn=user1,ou=accounts,<LDAP_BASE_DN>` and so on.
+Passwords do match the the `cn`, so `user1` for the user `uid=user1,ou=accounts,<LDAP_BASE_DN>` and so on.
 
 ## Groups
 
 We have one group
 
-- cn=drupalwiki,ou=base1,ou=groups,<LDAP_BASE_DN>
+- uid=myservice,ou=base1,ou=groups,<LDAP_BASE_DN>
 
 with the following members
 
-- cn=included1,ou=base1,ou=accounts,<LDAP_BASE_DN>
-- cn=included2,ou=base1,ou=accounts,<LDAP_BASE_DN>
-- cn=included3,ou=base1,ou=accounts,<LDAP_BASE_DN>
+- uid=included1,ou=base1,ou=accounts,<LDAP_BASE_DN>
+- uid=included2,ou=base1,ou=accounts,<LDAP_BASE_DN>
+- uid=included3,ou=base1,ou=accounts,<LDAP_BASE_DN>
 
 ### Type 2 Template
 
 #### Users
 
-- cn=included1,ou=base1,ou=accounts,<LDAP_BASE_DN>
-- cn=included2,ou=base1,ou=accounts,<LDAP_BASE_DN>
-- cn=included3,ou=base1,ou=accounts,<LDAP_BASE_DN>
-- cn=excluded1,ou=base1,ou=accounts,<LDAP_BASE_DN>
-- cn=excluded2,ou=base1,ou=accounts,<LDAP_BASE_DN>
+- uid=included1,ou=base1,ou=accounts,<LDAP_BASE_DN>
+- uid=included2,ou=base1,ou=accounts,<LDAP_BASE_DN>
+- uid=included3,ou=base1,ou=accounts,<LDAP_BASE_DN>
+- uid=excluded1,ou=base1,ou=accounts,<LDAP_BASE_DN>
+- uid=excluded2,ou=base1,ou=accounts,<LDAP_BASE_DN>
 
-Passwords do match the the `cn`, so `included1` for the user `cn=included1,ou=accounts,<LDAP_BASE_DN>` and so on.
+Passwords do match the the `cn`, so `included1` for the user `uid=included1,ou=accounts,<LDAP_BASE_DN>` and so on.
 
 #### Groups
 
 We have one group
 
-- cn=drupalwiki,ou=base1,ou=groups,<LDAP_BASE_DN>
+- uid=drupalwiki,ou=base1,ou=groups,<LDAP_BASE_DN>
 
 with the following members
 
-- cn=included1,ou=base1,ou=accounts,<LDAP_BASE_DN>
-- cn=included2,ou=base1,ou=accounts,<LDAP_BASE_DN>
-- cn=included3,ou=base1,ou=accounts,<LDAP_BASE_DN>
+- uid=included1,ou=base1,ou=accounts,<LDAP_BASE_DN>
+- uid=included2,ou=base1,ou=accounts,<LDAP_BASE_DN>
+- uid=included3,ou=base1,ou=accounts,<LDAP_BASE_DN>
 
 ## build
 

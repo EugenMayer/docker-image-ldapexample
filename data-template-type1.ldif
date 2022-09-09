@@ -31,8 +31,8 @@ dn: cn=myservice,ou=groups,ou=base1,{{ LDAP_BASE_DN }}
 objectClass: groupOfUniqueNames
 objectClass: top
 cn: myservice
-uniqueMember: cn=user1,ou=accounts,ou=base1,{{ LDAP_BASE_DN }}
-uniqueMember: cn=user2,ou=other_accounts,ou=base1,{{ LDAP_BASE_DN }}
+uniqueMember: uid=user1,ou=accounts,ou=base1,{{ LDAP_BASE_DN }}
+uniqueMember: uid=user2,ou=other_accounts,ou=base1,{{ LDAP_BASE_DN }}
 
 dn: uid=user1,ou=accounts,ou=base1,{{ LDAP_BASE_DN }}
 objectClass: inetOrgPerson
