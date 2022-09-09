@@ -39,7 +39,8 @@ See the connection details under layout.
 - cn=user1,ou=base1,ou=accounts,<LDAP_BASE_DN>
 - cn=userExcluded1,ou=base1,ou=accounts,<LDAP_BASE_DN>
 - cn=user1,ou=base2,ou=accounts,<LDAP_BASE_DN>
-passwords are always like the `cn`, so `included1` for the user `cn=included1,ou=accounts,<LDAP_BASE_DN>` and so on
+
+Passwords do match the the `cn`, so `user1` for the user `cn=user1,ou=accounts,<LDAP_BASE_DN>` and so on.
 
 ## Groups
 
@@ -52,24 +53,24 @@ with the following members
 - cn=included1,ou=base1,ou=accounts,<LDAP_BASE_DN>
 - cn=included2,ou=base1,ou=accounts,<LDAP_BASE_DN>
 - cn=included3,ou=base1,ou=accounts,<LDAP_BASE_DN>
-- 
 
 ### Type 2 Template
 
 #### Users
+
 - cn=included1,ou=base1,ou=accounts,<LDAP_BASE_DN>
 - cn=included2,ou=base1,ou=accounts,<LDAP_BASE_DN>
 - cn=included3,ou=base1,ou=accounts,<LDAP_BASE_DN>
 - cn=excluded1,ou=base1,ou=accounts,<LDAP_BASE_DN>
 - cn=excluded2,ou=base1,ou=accounts,<LDAP_BASE_DN>
 
-passwords are always like the `cn`, so `included1` for the user `cn=included1,ou=accounts,<LDAP_BASE_DN>` and so on
+Passwords do match the the `cn`, so `included1` for the user `cn=included1,ou=accounts,<LDAP_BASE_DN>` and so on.
 
 #### Groups
 
 We have one group
 
-cn=drupalwiki,ou=base1,ou=groups,<LDAP_BASE_DN>
+- cn=drupalwiki,ou=base1,ou=groups,<LDAP_BASE_DN>
 
 with the following members
 
