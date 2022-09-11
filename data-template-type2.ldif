@@ -10,13 +10,6 @@ objectClass: organizationalUnit
 objectClass: top
 ou: base2
 
-dn: cn=admin,ou=base1,{{ LDAP_BASE_DN }}
-objectClass: organizationalRole
-objectClass: simpleSecurityObject
-cn: admin
-userPassword:: e1NTSEF9aHZIc29PMXN4TDFBak9Nc3ZSMDU2YVNTT01FcllyYXk=
-description: LDAP administrator
-
 dn: ou=groups,ou=base1,{{ LDAP_BASE_DN }}
 objectClass: organizationalUnit
 objectClass: top
