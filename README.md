@@ -57,7 +57,7 @@ with the following members
 
 - uid=user1,ou=base1,ou=accounts,<LDAP_BASE_DN>
 - uid=user2,ou=base1,ou=accounts,<LDAP_BASE_DN>
-- uid=included3,ou=base2,ou=accounts,<LDAP_BASE_DN>
+- uid=included1,ou=base2,ou=accounts,<LDAP_BASE_DN>
 
 ### Type 2 Template
 

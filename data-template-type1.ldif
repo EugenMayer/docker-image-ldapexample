@@ -102,4 +102,5 @@ objectClass: groupOfUniqueNames
 objectClass: top
 cn: myservice
 uniqueMember: uid=user1,ou=accounts,ou=base1,{{ LDAP_BASE_DN }}
-uniqueMember: uid=user1,ou=accounts,ou=base2,{{ LDAP_BASE_DN }}
+uniqueMember: uid=user2,ou=accounts,ou=base1,{{ LDAP_BASE_DN }}
+uniqueMember: uid=included1,ou=accounts,ou=base2,{{ LDAP_BASE_DN }}
