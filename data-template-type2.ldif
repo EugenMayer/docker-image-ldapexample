@@ -27,29 +27,6 @@ objectClass: organizationalUnit
 objectClass: top
 ou: accounts
 
-dn: cn=myservice,ou=groups,ou=base1,{{ LDAP_BASE_DN }}
-objectClass: groupOfUniqueNames
-objectClass: top
-cn: myservice
-uniqueMember: uid=included1,ou=accounts,ou=base1,{{ LDAP_BASE_DN }}
-uniqueMember: uid=included2,ou=accounts,ou=base1,{{ LDAP_BASE_DN }}
-uniqueMember: uid=included3,ou=accounts,ou=base1,{{ LDAP_BASE_DN }}
-uniqueMember: uid=includedMissingMail,ou=accounts,ou=base1,{{ LDAP_BASE_DN }}
-uniqueMember: uid=included1,ou=accounts,ou=base2,{{ LDAP_BASE_DN }}
-
-dn: cn=otherservice,ou=groups,ou=base1,{{ LDAP_BASE_DN }}
-objectClass: groupOfUniqueNames
-objectClass: top
-cn: otherservice
-uniqueMember: uid=included1,ou=accounts,ou=base1,{{ LDAP_BASE_DN }}
-
-dn: cn=groupwithinvalid,ou=groups,ou=base1,{{ LDAP_BASE_DN }}
-objectClass: groupOfUniqueNames
-objectClass: top
-cn: groupwithinvalid
-uniqueMember: uid=includedMissingMail,ou=accounts,ou=base1,{{ LDAP_BASE_DN }}
-
-
 dn: uid=included1,ou=accounts,ou=base1,{{ LDAP_BASE_DN }}
 objectClass: inetOrgPerson
 objectClass: organizationalPerson
@@ -192,3 +169,25 @@ userPassword:: e1NTSEE1MTJ9TEdiTjdzU1ZVOHhPWjNFWDNYSTRsTkxrcWJDeVB5WjZlMUdqc
  2pDZkg2R2pWVTJ0dHUrUGdFcThpSGRUaWt5SUxMbVFza1c1T1RkMzlpNUhSc2F5OEx4T3JvbTc4
  bVdk
 
+
+dn: cn=myservice,ou=groups,ou=base1,{{ LDAP_BASE_DN }}
+objectClass: groupOfUniqueNames
+objectClass: top
+cn: myservice
+uniqueMember: uid=included1,ou=accounts,ou=base1,{{ LDAP_BASE_DN }}
+uniqueMember: uid=included2,ou=accounts,ou=base1,{{ LDAP_BASE_DN }}
+uniqueMember: uid=included3,ou=accounts,ou=base1,{{ LDAP_BASE_DN }}
+uniqueMember: uid=includedMissingMail,ou=accounts,ou=base1,{{ LDAP_BASE_DN }}
+uniqueMember: uid=included1,ou=accounts,ou=base2,{{ LDAP_BASE_DN }}
+
+dn: cn=otherservice,ou=groups,ou=base1,{{ LDAP_BASE_DN }}
+objectClass: groupOfUniqueNames
+objectClass: top
+cn: otherservice
+uniqueMember: uid=included1,ou=accounts,ou=base1,{{ LDAP_BASE_DN }}
+
+dn: cn=groupwithinvalid,ou=groups,ou=base1,{{ LDAP_BASE_DN }}
+objectClass: groupOfUniqueNames
+objectClass: top
+cn: groupwithinvalid
+uniqueMember: uid=includedMissingMail,ou=accounts,ou=base1,{{ LDAP_BASE_DN }}
