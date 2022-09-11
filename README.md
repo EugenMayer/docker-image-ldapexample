@@ -51,7 +51,7 @@ Passwords do match the the `uid`, so `user1` for the user `uid=user1,ou=accounts
 
 We have one group
 
-- uid=myservice,ou=base1,ou=groups,<LDAP_BASE_DN>
+- cn=myservice,ou=base1,ou=groups,<LDAP_BASE_DN>
 
 with the following members
 
@@ -77,16 +77,22 @@ Passwords do match the the `uid`, so `included1` for the user `uid=included1,ou=
 
 #### Groups
 
-We have one group
+We have groups
 
-- uid=drupalwiki,ou=base1,ou=groups,<LDAP_BASE_DN>
+- cn=myservice,ou=base1,ou=groups,<LDAP_BASE_DN>
+- cn=otherservice,ou=base1,ou=groups,<LDAP_BASE_DN>
+- cn=emptygroup,ou=base1,ou=groups,<LDAP_BASE_DN>
 
 with the following members
 
+myservice
 - uid=included1,ou=base1,ou=accounts,<LDAP_BASE_DN>
 - uid=included2,ou=base1,ou=accounts,<LDAP_BASE_DN>
 - uid=included3,ou=base1,ou=accounts,<LDAP_BASE_DN>
 - uid=includedMissingMail,ou=base1,ou=accounts,<LDAP_BASE_DN>
+
+otherservice
+- uid=included1,ou=base1,ou=accounts,<LDAP_BASE_DN>
 
 ## Build
 
