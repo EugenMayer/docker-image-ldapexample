@@ -43,10 +43,12 @@ objectClass: top
 cn: otherservice
 uniqueMember: uid=included1,ou=accounts,ou=base1,{{ LDAP_BASE_DN }}
 
-dn: cn=emptygroup,ou=groups,ou=base1,{{ LDAP_BASE_DN }}
+dn: cn=groupwithinvalid,ou=groups,ou=base1,{{ LDAP_BASE_DN }}
 objectClass: groupOfUniqueNames
 objectClass: top
-cn: emptygroup
+cn: groupwithinvalid
+uniqueMember: uid=includedMissingMail,ou=accounts,ou=base1,{{ LDAP_BASE_DN }}
+
 
 dn: uid=included1,ou=accounts,ou=base1,{{ LDAP_BASE_DN }}
 objectClass: inetOrgPerson

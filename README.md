@@ -81,7 +81,7 @@ We have groups
 
 - cn=myservice,ou=base1,ou=groups,<LDAP_BASE_DN>
 - cn=otherservice,ou=base1,ou=groups,<LDAP_BASE_DN>
-- cn=emptygroup,ou=base1,ou=groups,<LDAP_BASE_DN>
+- cn=groupwithinvalid,ou=base1,ou=groups,<LDAP_BASE_DN>
 
 with the following members
 
@@ -93,6 +93,9 @@ myservice
 
 otherservice
 - uid=included1,ou=base1,ou=accounts,<LDAP_BASE_DN>
+
+groupwithinvalid
+- uid=includedMissingMail,ou=base1,ou=accounts,<LDAP_BASE_DN>
 
 ## Build
 
