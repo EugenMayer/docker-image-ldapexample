@@ -28,7 +28,7 @@ Server 1 has the port `10389` and the default domain example.org
 - admin password: `admin`
 
 Server 2 has the port `20389` and the default domain example.org
-- admin user: `cn=admin,dc=kontextwork-test,dc=dc`
+- admin user: `cn=admin,dc=kontextwork-test,dc=de`
 - admin password: `admin`
 
 When you see the Users / Groups below, you need to replace the `<LDAP_BASE_DN>` with the domain, so either `dc=example,dc=org` or`dc=kontextwork-test,dc=de`
