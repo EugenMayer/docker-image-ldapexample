@@ -51,7 +51,7 @@ Passwords do match the the `uid`, so `user1` for the user `uid=user1,ou=accounts
 
 We have one group
 
-- cn=myservice,ou=base1,ou=groups,<LDAP_BASE_DN>
+- cn=myservice,ou=groups,ou=base1,<LDAP_BASE_DN>
 
 with the following members
 
