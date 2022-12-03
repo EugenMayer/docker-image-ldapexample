@@ -1,5 +1,4 @@
 [![build](https://github.com/EugenMayer/docker-image-ldapexample/actions/workflows/build.yml/badge.svg)](https://github.com/EugenMayer/docker-image-ldapexample/actions/workflows/build.yml) 
-[![build-and-push](https://github.com/EugenMayer/docker-image-ldapexample/actions/workflows/publish.yml/badge.svg)](https://github.com/EugenMayer/docker-image-ldapexample/actions/workflows/publish.yml)
 
 ## WAT
 

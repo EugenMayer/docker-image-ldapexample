@@ -46,3 +46,15 @@ jobs:
           build-args: |
             TEMPLATE_PATH=./data-template-type2.ldif
             LDAP_DOMAIN=kontextwork-test.de
+      - name: Push type2
+        uses: docker/build-push-action@v3
+        with:
+          context: .
+          platforms: linux/amd64
+          push: true
+          tags: |
+            ${{ env.IMAGE_FQDN }}:type2
+            ${{ env.IMAGE_FQDN }}:type2-${{ github.ref_name }}
+          build-args: |
+            TEMPLATE_PATH=./data-template-type2.ldif
+            LDAP_DOMAIN=kontextwork-test.de
