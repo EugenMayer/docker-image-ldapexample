@@ -38,9 +38,9 @@ homeDirectory: /home/user
 sn: User1
 uid: user1
 uidNumber: 1
-userPassword:: e1NTSEE1MTJ9TEdiTjdzU1ZVOHhPWjNFWDNYSTRsTkxrcWJDeVB5WjZlMUdqc
- 2pDZkg2R2pWVTJ0dHUrUGdFcThpSGRUaWt5SUxMbVFza1c1T1RkMzlpNUhSc2F5OEx4T3JvbTc4
- bVdk
+userPassword:: e1NTSEF9UjN0VlhCSGJ2VFZEbDd1eFhrb3lPaUJHdTc0Q0FLRUF6QW10ZEE9P
+ Q==
+
 mail: user1@maildomain.local
 
 dn: uid=user2,ou=accounts,ou=base1,{{ LDAP_BASE_DN }}
@@ -57,9 +57,8 @@ homeDirectory: /home/user
 sn: User2
 uid: user2
 uidNumber: 2
-userPassword:: e1NTSEE1MTJ9TEdiTjdzU1ZVOHhPWjNFWDNYSTRsTkxrcWJDeVB5WjZlMUdqc
- 2pDZkg2R2pWVTJ0dHUrUGdFcThpSGRUaWt5SUxMbVFza1c1T1RkMzlpNUhSc2F5OEx4T3JvbTc4
- bVdk
+userPassword:: e1NTSEF9SWtzV0Zlc29HTS9LTG9vb2l0bi9zN1VDeWdPaENsYm1qRnQwWXc9P
+ Q==
 
 dn: uid=userExcluded1,ou=accounts,ou=base1,{{ LDAP_BASE_DN }}
 objectClass: inetOrgPerson
@@ -74,10 +73,8 @@ homeDirectory: /home/user
 sn: Excluded1
 uid: userExcluded1
 uidNumber: 2
-userPassword:: e1NTSEE1MTJ9TEdiTjdzU1ZVOHhPWjNFWDNYSTRsTkxrcWJDeVB5WjZlMUdqc
- 2pDZkg2R2pWVTJ0dHUrUGdFcThpSGRUaWt5SUxMbVFza1c1T1RkMzlpNUhSc2F5OEx4T3JvbTc4
- bVdk
-
+userPassword:: e1NTSEF9d2o3ZWN4SjhDMXlQbFcwRkFObjVsOCttbVVZd3NOeVBvdWhmU2c9P
+ Q==
 dn: ou=accounts,ou=base2,{{ LDAP_BASE_DN }}
 objectClass: organizationalUnit
 objectClass: top
@@ -97,9 +94,8 @@ homeDirectory: /home/user
 sn: Included1
 uid: included1
 uidNumber: 1
-userPassword:: e1NTSEE1MTJ9TEdiTjdzU1ZVOHhPWjNFWDNYSTRsTkxrcWJDeVB5WjZlMUdqc
- 2pDZkg2R2pWVTJ0dHUrUGdFcThpSGRUaWt5SUxMbVFza1c1T1RkMzlpNUhSc2F5OEx4T3JvbTc4
- bVdk
+userPassword:: e1NTSEF9cit0YUR0MGR2N2c3MFZkUUxwZmEwdlJxeDNGVVcrUmlGN0N4V0E9P
+ Q==
 
 dn: uid=readonly,ou=other accounts,ou=base1,{{ LDAP_BASE_DN }}
 objectClass: inetOrgPerson
