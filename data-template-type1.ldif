@@ -40,7 +40,6 @@ uid: user1
 uidNumber: 1
 userPassword:: e1NTSEF9UjN0VlhCSGJ2VFZEbDd1eFhrb3lPaUJHdTc0Q0FLRUF6QW10ZEE9P
  Q==
-
 mail: user1@maildomain.local
 
 dn: uid=user2,ou=accounts,ou=base1,{{ LDAP_BASE_DN }}
@@ -75,6 +74,7 @@ uid: userExcluded1
 uidNumber: 2
 userPassword:: e1NTSEF9d2o3ZWN4SjhDMXlQbFcwRkFObjVsOCttbVVZd3NOeVBvdWhmU2c9P
  Q==
+
 dn: ou=accounts,ou=base2,{{ LDAP_BASE_DN }}
 objectClass: organizationalUnit
 objectClass: top
