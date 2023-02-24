@@ -42,7 +42,7 @@ The ldif's are templated, so you can change the container env variable `LDAP_DOM
 - uid=user1,ou=accounts,ou=base1,,<LDAP_BASE_DN>
 - uid=user2,ou=accounts,ou=base1,<LDAP_BASE_DN>
 - uid=included1,ou=accounts,ou=base2,<LDAP_BASE_DN>
-- uid=readonly,ou=other accounts,ou=base2,<LDAP_BASE_DN>
+- uid=readonly,ou=other accounts,ou=base1,<LDAP_BASE_DN>
 - uid=userExcludede,ou=accounts,ou=base1,<LDAP_BASE_DN>
 
 Passwords do match the the `uid`, so `user1` for the user `uid=user1,ou=accounts,<LDAP_BASE_DN>` and so on.
@@ -68,7 +68,7 @@ with the following members
 - uid=included1,ou=accounts,ou=base1,<LDAP_BASE_DN>
 - uid=included2,ou=accounts,ou=base1,<LDAP_BASE_DN>
 - uid=included3,ou=accounts,ou=base1,<LDAP_BASE_DN>
-- uid=readonly,ou=other accounts,ou=base2,<LDAP_BASE_DN>
+- uid=readonly,ou=other accounts,ou=base1,<LDAP_BASE_DN>
 - uid=includedMissingMail,ou=accounts,ou=base1<LDAP_BASE_DN>
 - uid=excluded1,ou=accounts,ou=base1,<LDAP_BASE_DN>
 - uid=excluded2,ou=accounts,ou=base1,<LDAP_BASE_DN>

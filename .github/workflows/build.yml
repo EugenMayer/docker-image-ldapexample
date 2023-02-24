@@ -27,7 +27,7 @@ jobs:
         with:
           context: .
           platforms: linux/amd64
-          push: push
+          push: true
           tags: |
             ${{ env.IMAGE_FQDN }}:type1
             ${{ env.IMAGE_FQDN }}:type1-${{ github.ref_name }}
