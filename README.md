@@ -20,7 +20,7 @@ See the connection details under layout.
 
 ## Database layout
 
-Using `docker-compose.yml`, you will have 2 servers started as an example, with 2 slightly different layous, based on `data-template-type1.ldif` and `data-template-type2.ldif`
+Using `docker-compose.yml`, you will have 2 servers started as an example, with 2 slightly different layouts, based on `data-template-type1.ldif` and `data-template-type2.ldif`
 
 Server 1 has the port `10389` and the default domain example.org
 - admin user: `cn=admin,dc=example,dc=org`
@@ -42,6 +42,7 @@ The ldif's are templated, so you can change the container env variable `LDAP_DOM
 - uid=user1,ou=accounts,ou=base1,,<LDAP_BASE_DN>
 - uid=user2,ou=accounts,ou=base1,<LDAP_BASE_DN>
 - uid=included1,ou=accounts,ou=base2,<LDAP_BASE_DN>
+- uid=readonly,ou=other accounts,ou=base2,<LDAP_BASE_DN>
 - uid=userExcludede,ou=accounts,ou=base1,<LDAP_BASE_DN>
 
 Passwords do match the the `uid`, so `user1` for the user `uid=user1,ou=accounts,<LDAP_BASE_DN>` and so on.
@@ -67,6 +68,7 @@ with the following members
 - uid=included1,ou=accounts,ou=base1,<LDAP_BASE_DN>
 - uid=included2,ou=accounts,ou=base1,<LDAP_BASE_DN>
 - uid=included3,ou=accounts,ou=base1,<LDAP_BASE_DN>
+- uid=readonly,ou=other accounts,ou=base2,<LDAP_BASE_DN>
 - uid=includedMissingMail,ou=accounts,ou=base1<LDAP_BASE_DN>
 - uid=excluded1,ou=accounts,ou=base1,<LDAP_BASE_DN>
 - uid=excluded2,ou=accounts,ou=base1,<LDAP_BASE_DN>

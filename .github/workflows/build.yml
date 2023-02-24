@@ -27,7 +27,7 @@ jobs:
         with:
           context: .
           platforms: linux/amd64
-          push: false
+          push: push
           tags: |
             ${{ env.IMAGE_FQDN }}:type1
             ${{ env.IMAGE_FQDN }}:type1-${{ github.ref_name }}
@@ -35,18 +35,6 @@ jobs:
             TEMPLATE_PATH=./data-template-type1.ldif
             LDAP_DOMAIN=example.org
       - name: Build type2
-        uses: docker/build-push-action@v3
-        with:
-          context: .
-          platforms: linux/amd64
-          push: false
-          tags: |
-            ${{ env.IMAGE_FQDN }}:type2
-            ${{ env.IMAGE_FQDN }}:type2-${{ github.ref_name }}
-          build-args: |
-            TEMPLATE_PATH=./data-template-type2.ldif
-            LDAP_DOMAIN=kontextwork-test.de
-      - name: Push type2
         uses: docker/build-push-action@v3
         with:
           context: .
