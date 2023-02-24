@@ -180,9 +180,8 @@ homeDirectory: /home/user
 sn: readonly
 uid: readonly
 uidNumber: 10
-userPassword:: e1NTSEE1MTJ9dEtkYUxQcnAxbWFuRE1kVUFRVGxvdlVHNjN2VTAwcGdBbEFJb
- Ec3dHVCdHNPNnovT2txN1RmQUpQendBaFlraC9mOTArdTE4eGV3SEV1TlZybVR5V2RlZ1dLNXBL
- VGRC
+userPassword:: e1NTSEF9UEU5K2VCM2owVmtMazkyeWRUNk1uTit3Y200dnd6czBJZHdLbHc9P
+ Q==
 mail: readonly@maildomain.local
 
 dn: cn=myservice,ou=groups,ou=base1,{{ LDAP_BASE_DN }}
