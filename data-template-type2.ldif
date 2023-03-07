@@ -36,6 +36,7 @@ mail: included1@maildomain.local
 cn: included1
 gidNumber: 1
 homeDirectory: /home/included1
+initials: included1@KONTEXTWORK-TEST.DE
 sn: User1
 uid: included1
 uidNumber: 1
@@ -53,6 +54,7 @@ mail: included2@maildomain.local
 cn: included2
 gidNumber: 2
 homeDirectory: /home/included2
+initials: included2@KONTEXTWORK-TEST.DE
 sn: Included2
 uid: included2
 uidNumber: 2
@@ -70,6 +72,7 @@ mail: included3@maildomain.local
 cn: included3
 gidNumber: 3
 homeDirectory: /home/included3
+initials: included3@KONTEXTWORK-TEST.DE
 sn: Included3
 uid: included3
 uidNumber: 3
@@ -87,6 +90,7 @@ objectClass: top
 cn: includedMissingMail
 gidNumber: 4
 homeDirectory: /home/includedMissingMail
+initials: includedMissingMail@KONTEXTWORK-TEST.DE
 sn: includedMissingMail
 uid: includedMissingMail
 uidNumber: 4
@@ -104,6 +108,7 @@ mail: excluded1@maildomain.local
 cn: excluded1
 gidNumber: 5
 homeDirectory: /home/excluded1
+initials: excluded1@KONTEXTWORK-TEST.DE
 sn: Excluded1
 uid: excluded1
 uidNumber: 5
@@ -121,6 +126,7 @@ mail: excluded2@maildomain.local
 cn: excluded2
 gidNumber: 6
 homeDirectory: /home/excluded2
+initials: excluded2@KONTEXTWORK-TEST.DE
 sn: Excluded2
 uid: excluded2
 uidNumber: 6
@@ -138,6 +144,7 @@ mail: excluded3@maildomain.local
 cn: excluded3
 gidNumber: 7
 homeDirectory: /home/excluded3
+initials: excluded3@KONTEXTWORK-TEST.D
 sn: Excluded3
 uid: excluded3
 uidNumber: 7
@@ -160,6 +167,7 @@ mail: included1@maildomain.local
 cn: included1
 gidNumber: 1
 homeDirectory: /home/user
+initials: included1@KONTEXTWORK-TEST.DE
 sn: Included1
 uid: included1
 uidNumber: 1
