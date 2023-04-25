@@ -37,7 +37,8 @@ cn: included1
 gidNumber: 1
 homeDirectory: /home/included1
 initials: included1@KONTEXTWORK-TEST.DE
-sn: User1
+sn: SNincluded1
+gn: GNincluded1
 uid: included1
 uidNumber: 1
 userPassword:: e3NzaGF9RVBnaXg2NkJXbEZ2elFmUUZGT1RPamkzVGlDaGw5Uml4b1FWZnc9P
@@ -55,7 +56,8 @@ cn: included2
 gidNumber: 2
 homeDirectory: /home/included2
 initials: included2@KONTEXTWORK-TEST.DE
-sn: Included2
+sn: SNincluded2
+gn: GNincluded2
 uid: included2
 uidNumber: 2
 userPassword:: e3NzaGF9TTdkbDJqci9Ja1dLbHoxQStHeTc2NTN1WFhxclNuVzR4S1MwZWc9P
@@ -73,7 +75,8 @@ cn: included3
 gidNumber: 3
 homeDirectory: /home/included3
 initials: included3@KONTEXTWORK-TEST.DE
-sn: Included3
+sn: SNincluded3
+gn: GNincluded3
 uid: included3
 uidNumber: 3
 userPassword:: e3NzaGF9eXVBZ0pHcm1pR085V0FxSjFFT1MzRGxkWEE5NHFrNTNlQzFXUkE9P
@@ -92,6 +95,8 @@ gidNumber: 4
 homeDirectory: /home/includedMissingMail
 initials: includedMissingMail@KONTEXTWORK-TEST.DE
 sn: includedMissingMail
+sn: SNIncludedMissingMail
+gn: GNIncludedMissingMail
 uid: includedMissingMail
 uidNumber: 4
 userPassword:: e3NzaGF9eXVBZ0pHcm1pR085V0FxSjFFT1MzRGxkWEE5NHFrNTNlQzFXUkE9P
@@ -109,7 +114,8 @@ cn: excluded1
 gidNumber: 5
 homeDirectory: /home/excluded1
 initials: excluded1@KONTEXTWORK-TEST.DE
-sn: Excluded1
+sn: SNexcluded1
+gn: GNexcluded1
 uid: excluded1
 uidNumber: 5
 userPassword:: e3NzaGF9RjBJZjNhTCsvZXE4SEwxQVRqTGxhUTRQNmUrVFgwUzI3RXVUd2c9P
@@ -127,7 +133,8 @@ cn: excluded2
 gidNumber: 6
 homeDirectory: /home/excluded2
 initials: excluded2@KONTEXTWORK-TEST.DE
-sn: Excluded2
+sn: SNexcluded2
+gn: GNexcluded2
 uid: excluded2
 uidNumber: 6
 userPassword:: e3NzaGF9RjBJZjNhTCsvZXE4SEwxQVRqTGxhUTRQNmUrVFgwUzI3RXVUd2c9P
@@ -145,7 +152,8 @@ cn: excluded3
 gidNumber: 7
 homeDirectory: /home/excluded3
 initials: excluded3@KONTEXTWORK-TEST.D
-sn: Excluded3
+sn: SNexcluded3
+gn: GNexcluded3
 uid: excluded3
 uidNumber: 7
 userPassword:: e3NzaGF9RjBJZjNhTCsvZXE4SEwxQVRqTGxhUTRQNmUrVFgwUzI3RXVUd2c9P
@@ -168,7 +176,8 @@ cn: included1
 gidNumber: 1
 homeDirectory: /home/user
 initials: included1@KONTEXTWORK-TEST.DE
-sn: Included1
+sn: SNincluded1
+gn: GNincluded1
 uid: included1
 uidNumber: 1
 userPassword:: e1NTSEE1MTJ9TEdiTjdzU1ZVOHhPWjNFWDNYSTRsTkxrcWJDeVB5WjZlMUdqc
