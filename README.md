@@ -83,6 +83,8 @@ We have groups
 - cn=myservice,ou=groupsou=base1,,<LDAP_BASE_DN>
 - cn=otherservice,ou=groups,ou=base1,<LDAP_BASE_DN>
 - cn=groupwithinvalid,ou=groups,ou=base1,<LDAP_BASE_DN>
+- cn=differentservice,ou=groups,ou=base1,<LDAP_BASE_DN>
+- cn=groupofgroups,ou=groups,ou=base1,<LDAP_BASE_DN>
 
 with the following members
 
@@ -94,6 +96,13 @@ myservice
 
 otherservice
 - uid=included1,ou=accounts,ou=base1,<LDAP_BASE_DN>
+
+differentservice
+- uid=included2,ou=accounts,ou=base1,<LDAP_BASE_DN>
+
+groupofgroups
+- cn=otherservice,ou=groups,ou=base1,<LDAP_BASE_DN>
+- cn=differentservice,ou=groups,ou=base1,<LDAP_BASE_DN>
 
 groupwithinvalid
 - uid=includedMissingMail,ou=accounts,ou=base1,<LDAP_BASE_DN>

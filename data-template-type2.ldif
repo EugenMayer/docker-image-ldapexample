@@ -217,6 +217,19 @@ objectClass: top
 cn: otherservice
 uniqueMember: uid=included1,ou=accounts,ou=base1,{{ LDAP_BASE_DN }}
 
+dn: cn=differentservice,ou=groups,ou=base1,{{ LDAP_BASE_DN }}
+objectClass: groupOfUniqueNames
+objectClass: top
+cn: differentservice
+uniqueMember: uid=included2,ou=accounts,ou=base1,{{ LDAP_BASE_DN }}
+
+dn: cn=groupofgroups,ou=groups,ou=base1,{{ LDAP_BASE_DN }}
+objectClass: groupOfUniqueNames
+objectClass: top
+cn: groupofgroups
+uniqueMember: cn=otherservice,ou=groups,ou=base1,{{ LDAP_BASE_DN }}
+uniqueMember: cn=differentservice,ou=groups,ou=base1,{{ LDAP_BASE_DN }}
+
 dn: cn=groupwithinvalid,ou=groups,ou=base1,{{ LDAP_BASE_DN }}
 objectClass: groupOfUniqueNames
 objectClass: top
