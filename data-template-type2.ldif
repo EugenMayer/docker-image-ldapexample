@@ -205,6 +205,7 @@ dn: cn=myservice,ou=groups,ou=base1,{{ LDAP_BASE_DN }}
 objectClass: groupOfUniqueNames
 objectClass: top
 cn: myservice
+o: myservice_o_field_value
 uniqueMember: uid=included1,ou=accounts,ou=base1,{{ LDAP_BASE_DN }}
 uniqueMember: uid=included2,ou=accounts,ou=base1,{{ LDAP_BASE_DN }}
 uniqueMember: uid=included3,ou=accounts,ou=base1,{{ LDAP_BASE_DN }}
