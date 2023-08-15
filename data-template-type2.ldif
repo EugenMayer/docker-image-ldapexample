@@ -215,18 +215,21 @@ dn: cn=otherservice,ou=groups,ou=base1,{{ LDAP_BASE_DN }}
 objectClass: groupOfUniqueNames
 objectClass: top
 cn: otherservice
+o: otherservice_o_field_value
 uniqueMember: uid=included1,ou=accounts,ou=base1,{{ LDAP_BASE_DN }}
 
 dn: cn=differentservice,ou=groups,ou=base1,{{ LDAP_BASE_DN }}
 objectClass: groupOfUniqueNames
 objectClass: top
 cn: differentservice
+o: differentservice_o_field_value
 uniqueMember: uid=included2,ou=accounts,ou=base1,{{ LDAP_BASE_DN }}
 
 dn: cn=groupofgroups,ou=groups,ou=base1,{{ LDAP_BASE_DN }}
 objectClass: groupOfUniqueNames
 objectClass: top
 cn: groupofgroups
+o: groupofgroups_o_field_value
 uniqueMember: cn=otherservice,ou=groups,ou=base1,{{ LDAP_BASE_DN }}
 uniqueMember: cn=differentservice,ou=groups,ou=base1,{{ LDAP_BASE_DN }}
 
@@ -234,4 +237,5 @@ dn: cn=groupwithinvalid,ou=groups,ou=base1,{{ LDAP_BASE_DN }}
 objectClass: groupOfUniqueNames
 objectClass: top
 cn: groupwithinvalid
+o: groupwithinvalid_o_field_value
 uniqueMember: uid=includedMissingMail,ou=accounts,ou=base1,{{ LDAP_BASE_DN }}
