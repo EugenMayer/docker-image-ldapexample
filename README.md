@@ -39,11 +39,11 @@ The ldif's are templated, so you can change the container env variable `LDAP_DOM
 `<LDAP_BASE_DN>` should be `dc=example,dc=org` if the default is not changed.
 
 ## Users
-- uid=user1,ou=accounts,ou=base1,,<LDAP_BASE_DN>
-- uid=user2,ou=accounts,ou=base1,<LDAP_BASE_DN>
-- uid=included1,ou=accounts,ou=base2,<LDAP_BASE_DN>
-- uid=readonly,ou=other accounts,ou=base1,<LDAP_BASE_DN>
-- uid=userExcludede,ou=accounts,ou=base1,<LDAP_BASE_DN>
+- uid=user1id,ou=accounts,ou=base1,,<LDAP_BASE_DN>
+- uid=user2id,ou=accounts,ou=base1,<LDAP_BASE_DN>
+- uid=included1id,ou=accounts,ou=base2,<LDAP_BASE_DN>
+- uid=readonlyid,ou=other accounts,ou=base1,<LDAP_BASE_DN>
+- uid=userExcludedeid,ou=accounts,ou=base1,<LDAP_BASE_DN>
 
 Passwords do match the the `uid`, so `user1` for the user `uid=user1,ou=accounts,<LDAP_BASE_DN>` and so on.
 
@@ -55,9 +55,9 @@ We have one group
 
 with the following members
 
-- uid=user1,ou=accounts,ou=base1,,<LDAP_BASE_DN>
-- uid=user2,ou=accounts,ou=base1,<LDAP_BASE_DN>
-- uid=included1,ou=accounts,ou=base2,<LDAP_BASE_DN>
+- uid=user1id,ou=accounts,ou=base1,,<LDAP_BASE_DN>
+- uid=user2id,ou=accounts,ou=base1,<LDAP_BASE_DN>
+- uid=included1id,ou=accounts,ou=base2,<LDAP_BASE_DN>
 
 ### Type 2 Template
 
@@ -65,14 +65,14 @@ with the following members
 
 #### Users
 
-- uid=included1,ou=accounts,ou=base1,<LDAP_BASE_DN>
-- uid=included2,ou=accounts,ou=base1,<LDAP_BASE_DN>
-- uid=included3,ou=accounts,ou=base1,<LDAP_BASE_DN>
-- uid=readonly,ou=other accounts,ou=base1,<LDAP_BASE_DN>
-- uid=includedMissingMail,ou=accounts,ou=base1<LDAP_BASE_DN>
-- uid=excluded1,ou=accounts,ou=base1,<LDAP_BASE_DN>
-- uid=excluded2,ou=accounts,ou=base1,<LDAP_BASE_DN>
-- uid=included1,ou=accounts,ou=base2,<LDAP_BASE_DN>
+- uid=included1id,ou=accounts,ou=base1,<LDAP_BASE_DN>
+- uid=included2id,ou=accounts,ou=base1,<LDAP_BASE_DN>
+- uid=included3id,ou=accounts,ou=base1,<LDAP_BASE_DN>
+- uid=readonlyid,ou=other accounts,ou=base1,<LDAP_BASE_DN>
+- uid=includedMissingMailid,ou=accounts,ou=base1<LDAP_BASE_DN>
+- uid=excluded1id,ou=accounts,ou=base1,<LDAP_BASE_DN>
+- uid=excluded2id,ou=accounts,ou=base1,<LDAP_BASE_DN>
+- uid=included1id,ou=accounts,ou=base2,<LDAP_BASE_DN>
 
 Passwords do match the the `uid`, so `included1` for the user `uid=included1,ou=accounts,<LDAP_BASE_DN>` and so on.
 
@@ -89,23 +89,23 @@ We have groups
 with the following members
 
 myservice
-- uid=included1,ou=accounts,ou=base1,<LDAP_BASE_DN>
-- uid=included2,ou=accounts,ou=base1,<LDAP_BASE_DN>
-- uid=included3,ou=accounts,ou=base1,<LDAP_BASE_DN>
-- uid=includedMissingMail,ou=accounts,ou=base1<LDAP_BASE_DN>
+- uid=included1id,ou=accounts,ou=base1,<LDAP_BASE_DN>
+- uid=included2id,ou=accounts,ou=base1,<LDAP_BASE_DN>
+- uid=included3id,ou=accounts,ou=base1,<LDAP_BASE_DN>
+- uid=includedMissingMailid,ou=accounts,ou=base1<LDAP_BASE_DN>
 
 otherservice
-- uid=included1,ou=accounts,ou=base1,<LDAP_BASE_DN>
+- uid=included1id,ou=accounts,ou=base1,<LDAP_BASE_DN>
 
 differentservice
-- uid=included2,ou=accounts,ou=base1,<LDAP_BASE_DN>
+- uid=included2id,ou=accounts,ou=base1,<LDAP_BASE_DN>
 
 groupofgroups
 - cn=otherservice,ou=groups,ou=base1,<LDAP_BASE_DN>
 - cn=differentservice,ou=groups,ou=base1,<LDAP_BASE_DN>
 
 groupwithinvalid
-- uid=includedMissingMail,ou=accounts,ou=base1,<LDAP_BASE_DN>
+- uid=includedMissingMailid,ou=accounts,ou=base1,<LDAP_BASE_DN>
 
 ## Build
 

@@ -36,7 +36,7 @@ cn: user1
 gidNumber: 1
 homeDirectory: /home/user
 sn: User1
-uid: user1
+uid: user1id
 uidNumber: 1
 userPassword:: e1NTSEF9UjN0VlhCSGJ2VFZEbDd1eFhrb3lPaUJHdTc0Q0FLRUF6QW10ZEE9P
  Q==
@@ -54,7 +54,7 @@ cn: user2
 gidNumber: 2
 homeDirectory: /home/user
 sn: User2
-uid: user2
+uid: user2id
 uidNumber: 2
 userPassword:: e1NTSEF9SWtzV0Zlc29HTS9LTG9vb2l0bi9zN1VDeWdPaENsYm1qRnQwWXc9P
  Q==
@@ -70,7 +70,7 @@ cn: excluded1
 gidNumber: 2
 homeDirectory: /home/user
 sn: Excluded1
-uid: userExcluded1
+uid: userExcluded1id
 uidNumber: 2
 userPassword:: e1NTSEF9d2o3ZWN4SjhDMXlQbFcwRkFObjVsOCttbVVZd3NOeVBvdWhmU2c9P
  Q==
@@ -92,7 +92,7 @@ mail: included1@maildomain.local
 gidNumber: 1
 homeDirectory: /home/user
 sn: Included1
-uid: included1
+uid: included1id
 uidNumber: 1
 userPassword:: e1NTSEF9cit0YUR0MGR2N2c3MFZkUUxwZmEwdlJxeDNGVVcrUmlGN0N4V0E9P
  Q==
@@ -108,7 +108,7 @@ cn: readonly
 gidNumber: 1
 homeDirectory: /home/user
 sn: readonly
-uid: readonly
+uid: readonlyid
 uidNumber: 10
 userPassword:: e1NTSEF9UEU5K2VCM2owVmtMazkyeWRUNk1uTit3Y200dnd6czBJZHdLbHc9P
  Q==

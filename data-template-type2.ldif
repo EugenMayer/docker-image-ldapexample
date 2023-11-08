@@ -39,7 +39,7 @@ homeDirectory: /home/included1
 initials: included1@KONTEXTWORK-TEST.DE
 sn: SNincluded1
 givenName: GNincluded1
-uid: included1
+uid: included1id
 uidNumber: 1
 userPassword:: e3NzaGF9RVBnaXg2NkJXbEZ2elFmUUZGT1RPamkzVGlDaGw5Uml4b1FWZnc9P
  Q==
@@ -58,7 +58,7 @@ homeDirectory: /home/included2
 initials: included2@KONTEXTWORK-TEST.DE
 sn: SNincluded2
 givenName: GNincluded2
-uid: included2
+uid: included2id
 uidNumber: 2
 userPassword:: e3NzaGF9TTdkbDJqci9Ja1dLbHoxQStHeTc2NTN1WFhxclNuVzR4S1MwZWc9P
  Q==
@@ -77,7 +77,7 @@ homeDirectory: /home/included3
 initials: included3@KONTEXTWORK-TEST.DE
 sn: SNincluded3
 givenName: GNincluded3
-uid: included3
+uid: included3id
 uidNumber: 3
 userPassword:: e3NzaGF9eXVBZ0pHcm1pR085V0FxSjFFT1MzRGxkWEE5NHFrNTNlQzFXUkE9P
  Q==
@@ -97,7 +97,7 @@ initials: includedMissingMail@KONTEXTWORK-TEST.DE
 sn: includedMissingMail
 sn: SNIncludedMissingMail
 givenName: GNIncludedMissingMail
-uid: includedMissingMail
+uid: includedMissingMailid
 uidNumber: 4
 userPassword:: e3NzaGF9eXVBZ0pHcm1pR085V0FxSjFFT1MzRGxkWEE5NHFrNTNlQzFXUkE9P
  Q==
@@ -116,7 +116,7 @@ homeDirectory: /home/excluded1
 initials: excluded1@KONTEXTWORK-TEST.DE
 sn: SNexcluded1
 givenName: GNexcluded1
-uid: excluded1
+uid: excluded1id
 uidNumber: 5
 userPassword:: e3NzaGF9RjBJZjNhTCsvZXE4SEwxQVRqTGxhUTRQNmUrVFgwUzI3RXVUd2c9P
  Q==
@@ -135,7 +135,7 @@ homeDirectory: /home/excluded2
 initials: excluded2@KONTEXTWORK-TEST.DE
 sn: SNexcluded2
 givenName: GNexcluded2
-uid: excluded2
+uid: excluded2id
 uidNumber: 6
 userPassword:: e3NzaGF9RjBJZjNhTCsvZXE4SEwxQVRqTGxhUTRQNmUrVFgwUzI3RXVUd2c9P
  Q==
@@ -154,7 +154,7 @@ homeDirectory: /home/excluded3
 initials: excluded3@KONTEXTWORK-TEST.D
 sn: SNexcluded3
 givenName: GNexcluded3
-uid: excluded3
+uid: excluded3id
 uidNumber: 7
 userPassword:: e3NzaGF9RjBJZjNhTCsvZXE4SEwxQVRqTGxhUTRQNmUrVFgwUzI3RXVUd2c9P
  Q==
@@ -178,7 +178,7 @@ homeDirectory: /home/user
 initials: included1@KONTEXTWORK-TEST.DE
 sn: SNincluded1
 givenName: GNincluded1
-uid: included1
+uid: included1id
 uidNumber: 1
 userPassword:: e1NTSEE1MTJ9TEdiTjdzU1ZVOHhPWjNFWDNYSTRsTkxrcWJDeVB5WjZlMUdqc
  2pDZkg2R2pWVTJ0dHUrUGdFcThpSGRUaWt5SUxMbVFza1c1T1RkMzlpNUhSc2F5OEx4T3JvbTc4
@@ -195,7 +195,7 @@ cn: readonly
 gidNumber: 1
 homeDirectory: /home/user
 sn: readonly
-uid: readonly
+uid: readonlyid
 uidNumber: 10
 userPassword:: e1NTSEF9UEU5K2VCM2owVmtMazkyeWRUNk1uTit3Y200dnd6czBJZHdLbHc9P
  Q==
