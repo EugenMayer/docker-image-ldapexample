@@ -25,7 +25,7 @@ objectClass: organizationalUnit
 objectClass: top
 ou: other accounts
 
-dn: uid=user1,ou=accounts,ou=base1,{{ LDAP_BASE_DN }}
+dn: uid=user1id,ou=accounts,ou=base1,{{ LDAP_BASE_DN }}
 objectClass: inetOrgPerson
 objectClass: organizationalPerson
 objectClass: person
@@ -42,7 +42,7 @@ userPassword:: e1NTSEF9UjN0VlhCSGJ2VFZEbDd1eFhrb3lPaUJHdTc0Q0FLRUF6QW10ZEE9P
  Q==
 mail: user1@maildomain.local
 
-dn: uid=user2,ou=accounts,ou=base1,{{ LDAP_BASE_DN }}
+dn: uid=user2id,ou=accounts,ou=base1,{{ LDAP_BASE_DN }}
 objectClass: inetOrgPerson
 objectClass: organizationalPerson
 objectClass: person
@@ -59,7 +59,7 @@ uidNumber: 2
 userPassword:: e1NTSEF9SWtzV0Zlc29HTS9LTG9vb2l0bi9zN1VDeWdPaENsYm1qRnQwWXc9P
  Q==
 
-dn: uid=userExcluded1,ou=accounts,ou=base1,{{ LDAP_BASE_DN }}
+dn: uid=userExcluded1id,ou=accounts,ou=base1,{{ LDAP_BASE_DN }}
 objectClass: inetOrgPerson
 objectClass: organizationalPerson
 objectClass: person
@@ -80,7 +80,7 @@ objectClass: organizationalUnit
 objectClass: top
 ou: accounts
 
-dn: uid=included1,ou=accounts,ou=base2,{{ LDAP_BASE_DN }}
+dn: uid=included1id,ou=accounts,ou=base2,{{ LDAP_BASE_DN }}
 objectClass: inetOrgPerson
 objectClass: organizationalPerson
 objectClass: person
@@ -97,7 +97,7 @@ uidNumber: 1
 userPassword:: e1NTSEF9cit0YUR0MGR2N2c3MFZkUUxwZmEwdlJxeDNGVVcrUmlGN0N4V0E9P
  Q==
 
-dn: uid=readonly,ou=other accounts,ou=base1,{{ LDAP_BASE_DN }}
+dn: uid=readonlyid,ou=other accounts,ou=base1,{{ LDAP_BASE_DN }}
 objectClass: inetOrgPerson
 objectClass: organizationalPerson
 objectClass: person
@@ -118,6 +118,6 @@ dn: cn=myservice,ou=groups,ou=base1,{{ LDAP_BASE_DN }}
 objectClass: groupOfUniqueNames
 objectClass: top
 cn: myservice
-uniqueMember: uid=user1,ou=accounts,ou=base1,{{ LDAP_BASE_DN }}
-uniqueMember: uid=user2,ou=accounts,ou=base1,{{ LDAP_BASE_DN }}
-uniqueMember: uid=included1,ou=accounts,ou=base2,{{ LDAP_BASE_DN }}
+uniqueMember: uid=user1id,ou=accounts,ou=base1,{{ LDAP_BASE_DN }}
+uniqueMember: uid=user2id,ou=accounts,ou=base1,{{ LDAP_BASE_DN }}
+uniqueMember: uid=included1id,ou=accounts,ou=base2,{{ LDAP_BASE_DN }}

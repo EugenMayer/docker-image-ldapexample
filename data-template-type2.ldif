@@ -25,7 +25,7 @@ objectClass: organizationalUnit
 objectClass: top
 ou: other accounts
 
-dn: uid=included1,ou=accounts,ou=base1,{{ LDAP_BASE_DN }}
+dn: uid=included1id,ou=accounts,ou=base1,{{ LDAP_BASE_DN }}
 objectClass: inetOrgPerson
 objectClass: organizationalPerson
 objectClass: person
@@ -44,7 +44,7 @@ uidNumber: 1
 userPassword:: e3NzaGF9RVBnaXg2NkJXbEZ2elFmUUZGT1RPamkzVGlDaGw5Uml4b1FWZnc9P
  Q==
 
-dn: uid=included2,ou=accounts,ou=base1,{{ LDAP_BASE_DN }}
+dn: uid=included2id,ou=accounts,ou=base1,{{ LDAP_BASE_DN }}
 objectClass: inetOrgPerson
 objectClass: organizationalPerson
 objectClass: person
@@ -63,7 +63,7 @@ uidNumber: 2
 userPassword:: e3NzaGF9TTdkbDJqci9Ja1dLbHoxQStHeTc2NTN1WFhxclNuVzR4S1MwZWc9P
  Q==
 
-dn: uid=included3,ou=accounts,ou=base1,{{ LDAP_BASE_DN }}
+dn: uid=included3id,ou=accounts,ou=base1,{{ LDAP_BASE_DN }}
 objectClass: inetOrgPerson
 objectClass: organizationalPerson
 objectClass: person
@@ -83,7 +83,7 @@ userPassword:: e3NzaGF9eXVBZ0pHcm1pR085V0FxSjFFT1MzRGxkWEE5NHFrNTNlQzFXUkE9P
  Q==
 
 
-dn: uid=includedMissingMail,ou=accounts,ou=base1,{{ LDAP_BASE_DN }}
+dn: uid=includedMissingMailid,ou=accounts,ou=base1,{{ LDAP_BASE_DN }}
 objectClass: inetOrgPerson
 objectClass: organizationalPerson
 objectClass: person
@@ -102,7 +102,7 @@ uidNumber: 4
 userPassword:: e3NzaGF9eXVBZ0pHcm1pR085V0FxSjFFT1MzRGxkWEE5NHFrNTNlQzFXUkE9P
  Q==
 
-dn: uid=excluded1,ou=accounts,ou=base1,{{ LDAP_BASE_DN }}
+dn: uid=excluded1id,ou=accounts,ou=base1,{{ LDAP_BASE_DN }}
 objectClass: inetOrgPerson
 objectClass: organizationalPerson
 objectClass: person
@@ -121,7 +121,7 @@ uidNumber: 5
 userPassword:: e3NzaGF9RjBJZjNhTCsvZXE4SEwxQVRqTGxhUTRQNmUrVFgwUzI3RXVUd2c9P
  Q==
 
-dn: uid=excluded2,ou=accounts,ou=base1,{{ LDAP_BASE_DN }}
+dn: uid=excluded2id,ou=accounts,ou=base1,{{ LDAP_BASE_DN }}
 objectClass: inetOrgPerson
 objectClass: organizationalPerson
 objectClass: person
@@ -140,7 +140,7 @@ uidNumber: 6
 userPassword:: e3NzaGF9RjBJZjNhTCsvZXE4SEwxQVRqTGxhUTRQNmUrVFgwUzI3RXVUd2c9P
  Q==
 
-dn: uid=excluded3,ou=accounts,ou=base1,{{ LDAP_BASE_DN }}
+dn: uid=excluded3id,ou=accounts,ou=base1,{{ LDAP_BASE_DN }}
 objectClass: inetOrgPerson
 objectClass: organizationalPerson
 objectClass: person
@@ -164,7 +164,7 @@ objectClass: organizationalUnit
 objectClass: top
 ou: accounts
 
-dn: uid=included1,ou=accounts,ou=base2,{{ LDAP_BASE_DN }}
+dn: uid=included1id,ou=accounts,ou=base2,{{ LDAP_BASE_DN }}
 objectClass: inetOrgPerson
 objectClass: organizationalPerson
 objectClass: person
@@ -184,7 +184,7 @@ userPassword:: e1NTSEE1MTJ9TEdiTjdzU1ZVOHhPWjNFWDNYSTRsTkxrcWJDeVB5WjZlMUdqc
  2pDZkg2R2pWVTJ0dHUrUGdFcThpSGRUaWt5SUxMbVFza1c1T1RkMzlpNUhSc2F5OEx4T3JvbTc4
  bVdk
 
-dn: uid=readonly,ou=other accounts,ou=base1,{{ LDAP_BASE_DN }}
+dn: uid=readonlyid,ou=other accounts,ou=base1,{{ LDAP_BASE_DN }}
 objectClass: inetOrgPerson
 objectClass: organizationalPerson
 objectClass: person
@@ -206,25 +206,25 @@ objectClass: groupOfUniqueNames
 objectClass: top
 cn: myservice
 o: myservice_o_field_value
-uniqueMember: uid=included1,ou=accounts,ou=base1,{{ LDAP_BASE_DN }}
-uniqueMember: uid=included2,ou=accounts,ou=base1,{{ LDAP_BASE_DN }}
-uniqueMember: uid=included3,ou=accounts,ou=base1,{{ LDAP_BASE_DN }}
-uniqueMember: uid=includedMissingMail,ou=accounts,ou=base1,{{ LDAP_BASE_DN }}
-uniqueMember: uid=included1,ou=accounts,ou=base2,{{ LDAP_BASE_DN }}
+uniqueMember: uid=included1id,ou=accounts,ou=base1,{{ LDAP_BASE_DN }}
+uniqueMember: uid=included2id,ou=accounts,ou=base1,{{ LDAP_BASE_DN }}
+uniqueMember: uid=included3id,ou=accounts,ou=base1,{{ LDAP_BASE_DN }}
+uniqueMember: uid=includedMissingMailid,ou=accounts,ou=base1,{{ LDAP_BASE_DN }}
+uniqueMember: uid=included1id,ou=accounts,ou=base2,{{ LDAP_BASE_DN }}
 
 dn: cn=otherservice,ou=groups,ou=base1,{{ LDAP_BASE_DN }}
 objectClass: groupOfUniqueNames
 objectClass: top
 cn: otherservice
 o: otherservice_o_field_value
-uniqueMember: uid=included1,ou=accounts,ou=base1,{{ LDAP_BASE_DN }}
+uniqueMember: uid=included1id,ou=accounts,ou=base1,{{ LDAP_BASE_DN }}
 
 dn: cn=differentservice,ou=groups,ou=base1,{{ LDAP_BASE_DN }}
 objectClass: groupOfUniqueNames
 objectClass: top
 cn: differentservice
 o: differentservice_o_field_value
-uniqueMember: uid=included2,ou=accounts,ou=base1,{{ LDAP_BASE_DN }}
+uniqueMember: uid=included2id,ou=accounts,ou=base1,{{ LDAP_BASE_DN }}
 
 dn: cn=groupofgroups,ou=groups,ou=base1,{{ LDAP_BASE_DN }}
 objectClass: groupOfUniqueNames
@@ -239,4 +239,4 @@ objectClass: groupOfUniqueNames
 objectClass: top
 cn: groupwithinvalid
 o: groupwithinvalid_o_field_value
-uniqueMember: uid=includedMissingMail,ou=accounts,ou=base1,{{ LDAP_BASE_DN }}
+uniqueMember: uid=includedMissingMailid,ou=accounts,ou=base1,{{ LDAP_BASE_DN }}
