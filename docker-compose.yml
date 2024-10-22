@@ -31,7 +31,7 @@ services:
       # LDAP_LDAPS_PORT_NUMBER: 636
       LDAP_ENABLE_TLS: yes
       LDAP_REQUIRE_TLS: yes
-      LDAP_TLS_VERIFY_CLIENT: never
+      LDAP_TLS_VERIFY_CLIENTS: never
       LDAP_TLS_CERT_FILE: /opt/bitnami/openldap/certs/openldap.crt
       LDAP_TLS_KEY_FILE: /opt/bitnami/openldap/certs/openldap.key
       LDAP_TLS_CA_FILE: /opt/bitnami/openldap/certs/openldapCA.crt
@@ -66,7 +66,7 @@ services:
       # LDAP_LDAPS_PORT_NUMBER: 636
       LDAP_ENABLE_TLS: yes
       LDAP_REQUIRE_TLS: yes
-      LDAP_TLS_VERIFY_CLIENT: never
+      LDAP_TLS_VERIFY_CLIENTS: never
       LDAP_TLS_CERT_FILE: /opt/bitnami/openldap/certs/openldap.crt
       LDAP_TLS_KEY_FILE: /opt/bitnami/openldap/certs/openldap.key
       LDAP_TLS_CA_FILE: /opt/bitnami/openldap/certs/openldapCA.crt
