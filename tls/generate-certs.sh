@@ -36,6 +36,6 @@ openssl req -nodes -newkey rsa:2048 -keyout ${SSL_DIR}/tls.key -out ${SSL_DIR}/c
 openssl x509 -req -days 1825 -in ${SSL_DIR}/cert.csr -CA ${SSL_DIR}/ca.crt -CAkey ${SSL_DIR}/ca.key -CAcreateserial -out ${SSL_DIR}/cert.crt
 
 # this is the user the container runs openldap as
-sudo chown 1001:1001 $SSL_DIR/*
-sudo chmod 400 $SSL_DIR/tls.key
+chown 1001:1001 $SSL_DIR/*
+chmod 400 $SSL_DIR/tls.key
 

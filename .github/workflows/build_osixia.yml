@@ -28,6 +28,7 @@ jobs:
           context: .
           platforms: linux/amd64
           push: true
+          file: Dockerfile_osixia
           tags: |
             ${{ env.IMAGE_FQDN }}:osixia-type1
             ${{ env.IMAGE_FQDN }}:osixia-type1-${{ github.ref_name }}
@@ -40,6 +41,7 @@ jobs:
           context: .
           platforms: linux/amd64
           push: true
+          file: Dockerfile_osixia
           tags: |
             ${{ env.IMAGE_FQDN }}:osixia-type2
             ${{ env.IMAGE_FQDN }}:osixia-type2-${{ github.ref_name }}
