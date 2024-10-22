@@ -1,0 +1,129 @@
+version: 1
+
+dn: dc=example,dc=org
+dc: example
+objectClass: dcObject
+objectClass: organizationalUnit
+ou: Example Org
+
+dn: ou=base1,dc=example,dc=org
+objectClass: organizationalUnit
+objectClass: top
+ou: base1
+
+dn: ou=base2,dc=example,dc=org
+objectClass: organizationalUnit
+objectClass: top
+ou: base2
+
+dn: ou=groups,ou=base1,dc=example,dc=org
+objectClass: organizationalUnit
+objectClass: top
+ou: groups
+
+dn: ou=accounts,ou=base1,dc=example,dc=org
+objectClass: organizationalUnit
+objectClass: top
+ou: accounts
+
+dn: ou=other accounts,ou=base1,dc=example,dc=org
+objectClass: organizationalUnit
+objectClass: top
+ou: other accounts
+
+dn: uid=user1id,ou=accounts,ou=base1,dc=example,dc=org
+objectClass: inetOrgPerson
+objectClass: organizationalPerson
+objectClass: person
+objectClass: posixAccount
+objectClass: simpleSecurityObject
+objectClass: top
+cn: user1
+gidNumber: 1
+homeDirectory: /home/user
+sn: User1
+uid: user1id
+uidNumber: 1
+userPassword:: e1NTSEF9UjN0VlhCSGJ2VFZEbDd1eFhrb3lPaUJHdTc0Q0FLRUF6QW10ZEE9P
+ Q==
+mail: user1@maildomain.local
+
+dn: uid=user2id,ou=accounts,ou=base1,dc=example,dc=org
+objectClass: inetOrgPerson
+objectClass: organizationalPerson
+objectClass: person
+objectClass: posixAccount
+objectClass: simpleSecurityObject
+objectClass: top
+mail: user2@maildomain.local
+cn: user2
+gidNumber: 2
+homeDirectory: /home/user
+sn: User2
+uid: user2id
+uidNumber: 2
+userPassword:: e1NTSEF9SWtzV0Zlc29HTS9LTG9vb2l0bi9zN1VDeWdPaENsYm1qRnQwWXc9P
+ Q==
+
+dn: uid=userExcluded1id,ou=accounts,ou=base1,dc=example,dc=org
+objectClass: inetOrgPerson
+objectClass: organizationalPerson
+objectClass: person
+objectClass: posixAccount
+objectClass: simpleSecurityObject
+objectClass: top
+cn: excluded1
+gidNumber: 2
+homeDirectory: /home/user
+sn: Excluded1
+uid: userExcluded1id
+uidNumber: 2
+userPassword:: e1NTSEF9d2o3ZWN4SjhDMXlQbFcwRkFObjVsOCttbVVZd3NOeVBvdWhmU2c9P
+ Q==
+
+dn: ou=accounts,ou=base2,dc=example,dc=org
+objectClass: organizationalUnit
+objectClass: top
+ou: accounts
+
+dn: uid=included1id,ou=accounts,ou=base2,dc=example,dc=org
+objectClass: inetOrgPerson
+objectClass: organizationalPerson
+objectClass: person
+objectClass: posixAccount
+objectClass: simpleSecurityObject
+objectClass: top
+cn: included1
+mail: included1@maildomain.local
+gidNumber: 1
+homeDirectory: /home/user
+sn: Included1
+uid: included1id
+uidNumber: 1
+userPassword:: e1NTSEF9cit0YUR0MGR2N2c3MFZkUUxwZmEwdlJxeDNGVVcrUmlGN0N4V0E9P
+ Q==
+
+dn: uid=readonlyid,ou=other accounts,ou=base1,dc=example,dc=org
+objectClass: inetOrgPerson
+objectClass: organizationalPerson
+objectClass: person
+objectClass: posixAccount
+objectClass: simpleSecurityObject
+objectClass: top
+cn: readonly
+gidNumber: 1
+homeDirectory: /home/user
+sn: readonly
+uid: readonlyid
+uidNumber: 10
+userPassword:: e1NTSEF9UEU5K2VCM2owVmtMazkyeWRUNk1uTit3Y200dnd6czBJZHdLbHc9P
+ Q==
+mail: readonly@maildomain.local
+
+dn: cn=myservice,ou=groups,ou=base1,dc=example,dc=org
+objectClass: groupOfUniqueNames
+objectClass: top
+cn: myservice
+uniqueMember: uid=user1id,ou=accounts,ou=base1,dc=example,dc=org
+uniqueMember: uid=user2id,ou=accounts,ou=base1,dc=example,dc=org
+uniqueMember: uid=included1id,ou=accounts,ou=base2,dc=example,dc=org

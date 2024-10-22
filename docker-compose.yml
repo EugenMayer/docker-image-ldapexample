@@ -1,13 +1,84 @@
 version: "3"
 services:
   ldap1:
-    image: osixia/openldap:1.5.0
+    image: bitnami/openldap:2.5.18
     # important so our TLS certificate includes our hostname
     container_name: ldap1
     hostname: ldap1
+    volumes:
+      # bootstrap our users
+      - ./ldif/bootstrap/bitnami/data-template-type1-static.ldif:/ldifs/50-bootstrap.ldif
+      # enable memberOf
+      - ./ldif/schema/bitnami/memberOf.ldif:/schemas/60-memberOf.ldif
+      # add certificates
+      - ./tls/certs/cert.crt:/opt/bitnami/openldap/certs/openldap.crt
+      - ./tls/certs/tls.key:/opt/bitnami/openldap/certs/openldap.key
+      - ./tls/certs/ca.crt:/opt/bitnami/openldap/certs/openldapCA.crt
+    ports:
+      - 30389:1389
+      - 30636:1636
+    environment:
+      #BITNAMI_DEBUG: true
+      LDAP_ROOT: dc=example,dc=org
+      LDAP_ADMIN_USER: admin
+      #LDAP_SKIP_DEFAULT_TREE: yes
+      # ADMIN user will be: cn=admin,LDAP_DOMAN_AS_BASE_DN, so e.g.: cn=admin,dc=kontextwork-test,dc=de
+      LDAP_ADMIN_PASSWORD: admin
+      # keeping the default here
+      # LDAP_CUSTOM_LDIF_DIR: /ldifs
+      # for now we use the unprivileged port 1389 / 1636
+      # LDAP_PORT_NUMBER: 389
+      # LDAP_LDAPS_PORT_NUMBER: 636
+      LDAP_ENABLE_TLS: yes
+      LDAP_REQUIRE_TLS: yes
+      LDAP_TLS_VERIFY_CLIENT: never
+      LDAP_TLS_CERT_FILE: /opt/bitnami/openldap/certs/openldap.crt
+      LDAP_TLS_KEY_FILE: /opt/bitnami/openldap/certs/openldap.key
+      LDAP_TLS_CA_FILE: /opt/bitnami/openldap/certs/openldapCA.crt
+  ldap2:
+    image: bitnami/openldap:2.5.18
+    # important so our TLS certificate includes our hostname
+    container_name: ldap2
+    hostname: ldap2
+    volumes:
+      # bootstrap our users
+      - ./ldif/bootstrap/bitnami/data-template-type2-static.ldif:/ldifs/50-bootstrap.ldif
+      # enable memberOf
+      - ./ldif/schema/bitnami/memberOf.ldif:/schemas/60-memberOf.ldif
+      # add certificates
+      - ./tls/certs/cert.crt:/opt/bitnami/openldap/certs/openldap.crt
+      - ./tls/certs/tls.key:/opt/bitnami/openldap/certs/openldap.key
+      - ./tls/certs/ca.crt:/opt/bitnami/openldap/certs/openldapCA.crt
+    ports:
+      - 40389:1389
+      - 40636:1636
+    environment:
+      #BITNAMI_DEBUG: true
+      LDAP_ROOT: dc=kontextwork-test,dc=de
+      LDAP_ADMIN_USER: admin
+      #LDAP_SKIP_DEFAULT_TREE: yes
+      # ADMIN user will be: cn=admin,LDAP_DOMAN_AS_BASE_DN, so e.g.: cn=admin,dc=kontextwork-test,dc=de
+      LDAP_ADMIN_PASSWORD: admin
+      # keeping the default here
+      # LDAP_CUSTOM_LDIF_DIR: /ldifs
+      # for now we use the unprivileged port 1389 / 1636
+      # LDAP_PORT_NUMBER: 389
+      # LDAP_LDAPS_PORT_NUMBER: 636
+      LDAP_ENABLE_TLS: yes
+      LDAP_REQUIRE_TLS: yes
+      LDAP_TLS_VERIFY_CLIENT: never
+      LDAP_TLS_CERT_FILE: /opt/bitnami/openldap/certs/openldap.crt
+      LDAP_TLS_KEY_FILE: /opt/bitnami/openldap/certs/openldap.key
+      LDAP_TLS_CA_FILE: /opt/bitnami/openldap/certs/openldapCA.crt
+  ######### LEGACY ############
+  osixia_ldap1:
+    image: osixia/openldap:1.5.0
+    # important so our TLS certificate includes our hostname
+    container_name: osixia_ldap1
+    hostname: osixia_ldap1
     command: --copy-service
     volumes:
-      - ./data-template-type1.ldif:/container/service/slapd/assets/config/bootstrap/ldif/50-bootstrap.ldif
+      - ./ldif/bootstrap/osixia/data-template-type1.ldif:/container/service/slapd/assets/config/bootstrap/ldif/50-bootstrap.ldif
     ports:
       - 10389:389
     environment:
@@ -17,14 +88,14 @@ services:
       LDAP_ADMIN_PASSWORD: 'admin'
       LDAP_DOMAIN: example.org
       LDAP_ORGANISATION: Example Org
-  ldap2:
+  osixia_ldap2:
     image: osixia/openldap:1.5.0
     # important so our TLS certificate includes our hostname
-    container_name: ldap2
-    hostname: ldap2
+    container_name: osixia_ldap2
+    hostname: osixia_ldap2
     command: --copy-service
     volumes:
-      - ./data-template-type2.ldif:/container/service/slapd/assets/config/bootstrap/ldif/50-bootstrap.ldif
+      - ./ldif/bootstrap/osixia/data-template-type2.ldif:/container/service/slapd/assets/config/bootstrap/ldif/50-bootstrap.ldif
     ports:
       - 20389:389
     environment:

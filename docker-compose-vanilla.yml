@@ -1,11 +1,8 @@
 version: "3"
 services:
   ldap:
-    image: osixia/openldap
+    image: bitnami/openldap:2.5
     # important so our TLS certificate includes our hostname
     container_name: ldap
     ports:
       - 12389:389
-    environment:
-      LDAP_TLS: 'true'
-      LDAP_TLS_VERIFY_CLIENT: 'never'

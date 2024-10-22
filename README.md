@@ -6,14 +6,27 @@ If you need to test-drive your ldap authentication or need a test-server to test
 
 ## start
 
-Just run `docker-compose up -d` right in here.
+Just run 
+
+```bash
+./start.sh
+
+#or 
+./tls/generate-tls.sh
+docker-compose up -d
+```
 
 You can also run the prebuild images without any mounts
 
 ```bash
-docker run -p 389:389 ghcr.io/eugenmayer/ldaptestserver:type1
+docker run -p 389:389 ghcr.io/eugenmayer/ldaptestserver:bitnami-type1
 #or 
-docker run -p 389:389 ghcr.io/eugenmayer/ldaptestserver:type2
+docker run -p 389:389 ghcr.io/eugenmayer/ldaptestserver:bitnami-type2
+
+# you can use the old osixia images using
+docker run -p 389:389 ghcr.io/eugenmayer/ldaptestserver:osixia-type1
+#or 
+docker run -p 389:389 ghcr.io/eugenmayer/ldaptestserver:osixia-type2
 ```
 
 See the connection details under layout.
@@ -117,5 +130,4 @@ or memberOf will not work!
 
 ## Credits
 
-Well they all belong to [osixia/docker-openldap](https://github.com/osixia/docker-openldap) who did bring up this awesome
-ldap docker image in the first place!
+Nowdays credits to the once again great chart of bitname [bitnami/openldap](https://hub.docker.com/r/bitnami/openldap) and in the past, thanks to [osixia/docker-openldap](https://github.com/osixia/docker-openldap) for the great image!

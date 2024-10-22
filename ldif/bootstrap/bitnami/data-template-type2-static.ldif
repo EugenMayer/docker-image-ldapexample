@@ -1,0 +1,248 @@
+version: 1
+
+dn: dc=kontextwork-test,dc=de
+dc: kontextwork-test
+objectClass: dcObject
+objectClass: organizationalUnit
+ou: KontextWork Test
+
+dn: ou=base1,dc=kontextwork-test,dc=de
+objectClass: organizationalUnit
+objectClass: top
+ou: base1
+
+dn: ou=base2,dc=kontextwork-test,dc=de
+objectClass: organizationalUnit
+objectClass: top
+ou: base2
+
+dn: ou=groups,ou=base1,dc=kontextwork-test,dc=de
+objectClass: organizationalUnit
+objectClass: top
+ou: groups
+
+dn: ou=accounts,ou=base1,dc=kontextwork-test,dc=de
+objectClass: organizationalUnit
+objectClass: top
+ou: accounts
+
+dn: ou=other accounts,ou=base1,dc=kontextwork-test,dc=de
+objectClass: organizationalUnit
+objectClass: top
+ou: other accounts
+
+dn: uid=included1id,ou=accounts,ou=base1,dc=kontextwork-test,dc=de
+objectClass: inetOrgPerson
+objectClass: organizationalPerson
+objectClass: person
+objectClass: posixAccount
+objectClass: simpleSecurityObject
+objectClass: top
+mail: included1@maildomain.local
+cn: included1
+gidNumber: 1
+homeDirectory: /home/included1
+initials: included1@KONTEXTWORK-TEST.DE
+sn: SNincluded1
+givenName: GNincluded1
+uid: included1id
+uidNumber: 1
+userPassword:: e3NzaGF9RVBnaXg2NkJXbEZ2elFmUUZGT1RPamkzVGlDaGw5Uml4b1FWZnc9P
+ Q==
+
+dn: uid=included2id,ou=accounts,ou=base1,dc=kontextwork-test,dc=de
+objectClass: inetOrgPerson
+objectClass: organizationalPerson
+objectClass: person
+objectClass: posixAccount
+objectClass: simpleSecurityObject
+objectClass: top
+mail: included2@maildomain.local
+cn: included2
+gidNumber: 2
+homeDirectory: /home/included2
+initials: included2@KONTEXTWORK-TEST.DE
+sn: SNincluded2
+givenName: GNincluded2
+uid: included2id
+uidNumber: 2
+userPassword:: e3NzaGF9TTdkbDJqci9Ja1dLbHoxQStHeTc2NTN1WFhxclNuVzR4S1MwZWc9P
+ Q==
+
+dn: uid=included3id,ou=accounts,ou=base1,dc=kontextwork-test,dc=de
+objectClass: inetOrgPerson
+objectClass: organizationalPerson
+objectClass: person
+objectClass: posixAccount
+objectClass: simpleSecurityObject
+objectClass: top
+mail: included3@maildomain.local
+cn: included3
+gidNumber: 3
+homeDirectory: /home/included3
+initials: included3@KONTEXTWORK-TEST.DE
+sn: SNincluded3
+givenName: GNincluded3
+uid: included3id
+uidNumber: 3
+userPassword:: e3NzaGF9eXVBZ0pHcm1pR085V0FxSjFFT1MzRGxkWEE5NHFrNTNlQzFXUkE9P
+ Q==
+
+
+dn: uid=includedMissingMailid,ou=accounts,ou=base1,dc=kontextwork-test,dc=de
+objectClass: inetOrgPerson
+objectClass: organizationalPerson
+objectClass: person
+objectClass: posixAccount
+objectClass: simpleSecurityObject
+objectClass: top
+cn: includedMissingMail
+gidNumber: 4
+homeDirectory: /home/includedMissingMail
+initials: includedMissingMail@KONTEXTWORK-TEST.DE
+sn: includedMissingMail
+sn: SNIncludedMissingMail
+givenName: GNIncludedMissingMail
+uid: includedMissingMailid
+uidNumber: 4
+userPassword:: e3NzaGF9eXVBZ0pHcm1pR085V0FxSjFFT1MzRGxkWEE5NHFrNTNlQzFXUkE9P
+ Q==
+
+dn: uid=excluded1id,ou=accounts,ou=base1,dc=kontextwork-test,dc=de
+objectClass: inetOrgPerson
+objectClass: organizationalPerson
+objectClass: person
+objectClass: posixAccount
+objectClass: simpleSecurityObject
+objectClass: top
+mail: excluded1@maildomain.local
+cn: excluded1
+gidNumber: 5
+homeDirectory: /home/excluded1
+initials: excluded1@KONTEXTWORK-TEST.DE
+sn: SNexcluded1
+givenName: GNexcluded1
+uid: excluded1id
+uidNumber: 5
+userPassword:: e3NzaGF9RjBJZjNhTCsvZXE4SEwxQVRqTGxhUTRQNmUrVFgwUzI3RXVUd2c9P
+ Q==
+
+dn: uid=excluded2id,ou=accounts,ou=base1,dc=kontextwork-test,dc=de
+objectClass: inetOrgPerson
+objectClass: organizationalPerson
+objectClass: person
+objectClass: posixAccount
+objectClass: simpleSecurityObject
+objectClass: top
+mail: excluded2@maildomain.local
+cn: excluded2
+gidNumber: 6
+homeDirectory: /home/excluded2
+initials: excluded2@KONTEXTWORK-TEST.DE
+sn: SNexcluded2
+givenName: GNexcluded2
+uid: excluded2id
+uidNumber: 6
+userPassword:: e3NzaGF9RjBJZjNhTCsvZXE4SEwxQVRqTGxhUTRQNmUrVFgwUzI3RXVUd2c9P
+ Q==
+
+dn: uid=excluded3id,ou=accounts,ou=base1,dc=kontextwork-test,dc=de
+objectClass: inetOrgPerson
+objectClass: organizationalPerson
+objectClass: person
+objectClass: posixAccount
+objectClass: simpleSecurityObject
+objectClass: top
+mail: excluded3@maildomain.local
+cn: excluded3
+gidNumber: 7
+homeDirectory: /home/excluded3
+initials: excluded3@KONTEXTWORK-TEST.D
+sn: SNexcluded3
+givenName: GNexcluded3
+uid: excluded3id
+uidNumber: 7
+userPassword:: e3NzaGF9RjBJZjNhTCsvZXE4SEwxQVRqTGxhUTRQNmUrVFgwUzI3RXVUd2c9P
+ Q==
+
+dn: ou=accounts,ou=base2,dc=kontextwork-test,dc=de
+objectClass: organizationalUnit
+objectClass: top
+ou: accounts
+
+dn: uid=included1id,ou=accounts,ou=base2,dc=kontextwork-test,dc=de
+objectClass: inetOrgPerson
+objectClass: organizationalPerson
+objectClass: person
+objectClass: posixAccount
+objectClass: simpleSecurityObject
+objectClass: top
+mail: included1@maildomain.local
+cn: included1
+gidNumber: 1
+homeDirectory: /home/user
+initials: included1@KONTEXTWORK-TEST.DE
+sn: SNincluded1
+givenName: GNincluded1
+uid: included1id
+uidNumber: 1
+userPassword:: e1NTSEE1MTJ9TEdiTjdzU1ZVOHhPWjNFWDNYSTRsTkxrcWJDeVB5WjZlMUdqc
+ 2pDZkg2R2pWVTJ0dHUrUGdFcThpSGRUaWt5SUxMbVFza1c1T1RkMzlpNUhSc2F5OEx4T3JvbTc4
+ bVdk
+
+dn: uid=readonlyid,ou=other accounts,ou=base1,dc=kontextwork-test,dc=de
+objectClass: inetOrgPerson
+objectClass: organizationalPerson
+objectClass: person
+objectClass: posixAccount
+objectClass: simpleSecurityObject
+objectClass: top
+cn: readonly
+gidNumber: 1
+homeDirectory: /home/user
+sn: readonly
+uid: readonlyid
+uidNumber: 10
+userPassword:: e1NTSEF9UEU5K2VCM2owVmtMazkyeWRUNk1uTit3Y200dnd6czBJZHdLbHc9P
+ Q==
+mail: readonly@maildomain.local
+
+dn: cn=myservice,ou=groups,ou=base1,dc=kontextwork-test,dc=de
+objectClass: groupOfUniqueNames
+objectClass: top
+cn: myservice
+o: myservice_o_field_value
+uniqueMember: uid=included1id,ou=accounts,ou=base1,dc=kontextwork-test,dc=de
+uniqueMember: uid=included2id,ou=accounts,ou=base1,dc=kontextwork-test,dc=de
+uniqueMember: uid=included3id,ou=accounts,ou=base1,dc=kontextwork-test,dc=de
+uniqueMember: uid=includedMissingMailid,ou=accounts,ou=base1,dc=kontextwork-test,dc=de
+uniqueMember: uid=included1id,ou=accounts,ou=base2,dc=kontextwork-test,dc=de
+
+dn: cn=otherservice,ou=groups,ou=base1,dc=kontextwork-test,dc=de
+objectClass: groupOfUniqueNames
+objectClass: top
+cn: otherservice
+o: otherservice_o_field_value
+uniqueMember: uid=included1id,ou=accounts,ou=base1,dc=kontextwork-test,dc=de
+
+dn: cn=differentservice,ou=groups,ou=base1,dc=kontextwork-test,dc=de
+objectClass: groupOfUniqueNames
+objectClass: top
+cn: differentservice
+o: differentservice_o_field_value
+uniqueMember: uid=included2id,ou=accounts,ou=base1,dc=kontextwork-test,dc=de
+
+dn: cn=groupofgroups,ou=groups,ou=base1,dc=kontextwork-test,dc=de
+objectClass: groupOfUniqueNames
+objectClass: top
+cn: groupofgroups
+o: groupofgroups_o_field_value
+uniqueMember: cn=otherservice,ou=groups,ou=base1,dc=kontextwork-test,dc=de
+uniqueMember: cn=differentservice,ou=groups,ou=base1,dc=kontextwork-test,dc=de
+
+dn: cn=groupwithinvalid,ou=groups,ou=base1,dc=kontextwork-test,dc=de
+objectClass: groupOfUniqueNames
+objectClass: top
+cn: groupwithinvalid
+o: groupwithinvalid_o_field_value
+uniqueMember: uid=includedMissingMailid,ou=accounts,ou=base1,dc=kontextwork-test,dc=de

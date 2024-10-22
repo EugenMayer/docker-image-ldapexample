@@ -1,14 +1,25 @@
-FROM osixia/openldap:1.5.0
+FROM bitnami/openldap:2.5
 
-ARG TEMPLATE_PATH=./data-template-type1.ldif
-ARG LDAP_DOMAIN=example.org
+ARG TEMPLATE_PATH=./data-template-type1-static.ldif
+ARG CERTS_PATH=./tls/certs
 
-ENV LDAP_DOMAIN=$LDAP_DOMAIN
-ENV LDAP_TLS='true'
-ENV LDAP_TLS_VERIFY_CLIENT='never'
+ARG $LDAP_ROOT=example.org
+
 ENV LDAP_ADMIN_PASSWORD="admin"
-COPY $TEMPLATE_PATH /container/service/slapd/assets/config/bootstrap/ldif/50-bootstrap.ldif
+ENV LDAP_ROOT=$LDAP_ROOT
 
-RUN chown -R openldap:openldap /container/service/slapd/assets/config/bootstrap/ldif/50-bootstrap.ldif
+# TLS setup
+ENV LDAP_ENABLE_TLS=yes
+ENV LDAP_REQUIRE_TLS=no
+ENV LDAP_TLS_VERIFY_CLIENT=never
+ENV LDAP_TLS_CERT_FILE=/opt/bitnami/openldap/certs/openldap.crt
+ENV LDAP_TLS_KEY_FILE=/opt/bitnami/openldap/certs/openldap.key
+ENV LDAP_TLS_CA_FILE=/opt/bitnami/openldap/certs/openldapCA.crt
+COPY CERTS_PATH/cert.crt /opt/bitnami/openldap/certs/openldap.crt
+COPY CERTS_PATH/tls.key /opt/bitnami/openldap/certs/openldap.key
+COPY CERTS_PATH/ca.crt /opt/bitnami/openldap/certs/openldapCA.crt
 
-CMD ["--copy-service"]
+# bootstrap setup
+COPY $TEMPLATE_PATH /ldifs/50-bootstrap.ldif
+COPY ./ldif/schema/bitnami/memberOf.ldif /schemas/memberOf.ldif
+RUN chown -R 1001:1001 /ldifs/50-bootstrap.ldif /schemas/memberOf.ldif
