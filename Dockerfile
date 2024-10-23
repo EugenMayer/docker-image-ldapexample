@@ -1,4 +1,4 @@
-FROM bitnami/openldap:2.5
+FROM bitnami/openldap:2.6
 
 ARG TEMPLATE_PATH=./data-template-type1-static.ldif
 ARG CERTS_PATH=./tls/certs

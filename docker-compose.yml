@@ -1,7 +1,7 @@
 version: "3"
 services:
   ldap1:
-    image: bitnami/openldap:2.5.18
+    image: bitnami/openldap:2.6.8
     # important so our TLS certificate includes our hostname
     container_name: ldap1
     hostname: ldap1
@@ -35,8 +35,13 @@ services:
       LDAP_TLS_CERT_FILE: /opt/bitnami/openldap/certs/openldap.crt
       LDAP_TLS_KEY_FILE: /opt/bitnami/openldap/certs/openldap.key
       LDAP_TLS_CA_FILE: /opt/bitnami/openldap/certs/openldapCA.crt
+      LDAP_ALLOW_ANON_BINDING: no
+      LDAP_USER_DC: ''
+      LDAP_USERS: 'readonly'
+      LDAP_PASSWORDS: 'readonly'
+      LDAP_CONFIG_ADMIN_ENABLED: no
   ldap2:
-    image: bitnami/openldap:2.5.18
+    image: bitnami/openldap:2.6.8
     # important so our TLS certificate includes our hostname
     container_name: ldap2
     hostname: ldap2
