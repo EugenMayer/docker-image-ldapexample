@@ -1,4 +1,3 @@
-version: "3"
 services:
   ldap1:
     image: bitnami/openldap:2.6.8
@@ -29,8 +28,8 @@ services:
       # for now we use the unprivileged port 1389 / 1636
       # LDAP_PORT_NUMBER: 389
       # LDAP_LDAPS_PORT_NUMBER: 636
-      LDAP_ENABLE_TLS: yes
-      LDAP_REQUIRE_TLS: yes
+      LDAP_ENABLE_TLS: "yes"
+      LDAP_REQUIRE_TLS: "no"
       LDAP_TLS_VERIFY_CLIENTS: never
       LDAP_TLS_CERT_FILE: /opt/bitnami/openldap/certs/openldap.crt
       LDAP_TLS_KEY_FILE: /opt/bitnami/openldap/certs/openldap.key
@@ -39,7 +38,10 @@ services:
       LDAP_USER_DC: ''
       LDAP_USERS: 'readonly'
       LDAP_PASSWORDS: 'readonly'
-      LDAP_CONFIG_ADMIN_ENABLED: no
+      LDAP_CONFIG_ADMIN_ENABLED: "yes"
+#      LDAP_ENABLE_PROXYPROTO: "yes"
+#      LDAP_PROXYPROTO_PORT_NUMBER: 30389
+#      LDAP_PROXYPROTO_LDAPS_PORT_NUMBER: 30636
   ldap2:
     image: bitnami/openldap:2.6.8
     # important so our TLS certificate includes our hostname
@@ -78,6 +80,8 @@ services:
   ######### LEGACY ############
   osixia_ldap1:
     image: osixia/openldap:1.5.0
+    profiles:
+      - osixia
     # important so our TLS certificate includes our hostname
     container_name: osixia_ldap1
     hostname: osixia_ldap1
@@ -95,6 +99,8 @@ services:
       LDAP_ORGANISATION: Example Org
   osixia_ldap2:
     image: osixia/openldap:1.5.0
+    profiles:
+      - osixia
     # important so our TLS certificate includes our hostname
     container_name: osixia_ldap2
     hostname: osixia_ldap2
