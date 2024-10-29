@@ -19,9 +19,6 @@ COPY $CERTS_PATH/cert.crt /opt/bitnami/openldap/certs/openldap.crt
 COPY $CERTS_PATH/tls.key /opt/bitnami/openldap/certs/openldap.key
 COPY $CERTS_PATH/ca.crt /opt/bitnami/openldap/certs/openldapCA.crt
 
-RUN chown 1001:1001 /opt/bitnami/openldap/certs/openldap.crt /opt/bitnami/openldap/certs/openldap.key /opt/bitnami/openldap/certs/openldapCA.crt
-
 # bootstrap setup
 COPY $TEMPLATE_PATH /ldifs/50-bootstrap.ldif
 COPY ./ldif/schema/bitnami/memberOf.ldif /schemas/memberOf.ldif
-RUN chown -R 1001:1001 /ldifs/50-bootstrap.ldif /schemas/memberOf.ldif
