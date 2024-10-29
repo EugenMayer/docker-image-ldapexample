@@ -1,4 +1,4 @@
-[![build](https://github.com/EugenMayer/docker-image-ldapexample/actions/workflows/build.yml/badge.svg)](https://github.com/EugenMayer/docker-image-ldapexample/actions/workflows/build.yml) 
+[![build](https://github.com/EugenMayer/docker-image-ldapexample/actions/workflows/build_bitnami.yml/badge.svg)](https://github.com/EugenMayer/docker-image-ldapexample/actions/workflows/build_bitnami.yml) 
 
 ## WAT
 
