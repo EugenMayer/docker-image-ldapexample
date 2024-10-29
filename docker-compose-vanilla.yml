@@ -1,6 +1,6 @@
 services:
   ldap:
-    image: bitnami/openldap:2.5
+    image: bitnami/openldap:2.6
     # important so our TLS certificate includes our hostname
     container_name: ldap
     ports:
