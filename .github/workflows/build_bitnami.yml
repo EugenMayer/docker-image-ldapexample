@@ -35,7 +35,7 @@ jobs:
             ${{ env.IMAGE_FQDN }}:bitnami-type1-${{ github.ref_name }}
           build-args: |
             TEMPLATE_PATH=./ldif/bootstrap/bitnami/data-template-type1-static.ldif
-            LDAP_ROOT='dc=example,dc=org'
+            LDAP_ROOT=dc=example,dc=org
       - name: Build type2
         uses: docker/build-push-action@v3
         with:
@@ -47,4 +47,4 @@ jobs:
             ${{ env.IMAGE_FQDN }}:bitnami-type2-${{ github.ref_name }}
           build-args: |
             TEMPLATE_PATH=./ldif/bootstrap/bitnami/data-template-type2-static.ldif
-            LDAP_ROOT='dc=kontextwork-test,dc=de'
+            LDAP_ROOT=dc=kontextwork-test,dc=de
