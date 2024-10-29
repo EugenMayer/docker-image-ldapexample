@@ -22,7 +22,7 @@ jobs:
           username: ${{ github.repository_owner }}
           password: ${{ github.token }}
       - name: Generate certificates
-        run: cd tls && ./generate-certs.sh
+        run: cd tls && ./generate-certs.sh ldap no
       # push only on main
       - name: Build type1
         uses: docker/build-push-action@v3
