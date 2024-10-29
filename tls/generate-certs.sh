@@ -28,7 +28,9 @@ emailAddress=info@company.tld
 
 # Create our SSL directory
 # in case it doesn't exist
-sudo rm certs -fr
+if [ $DO_CHANGEOWN == "yes" ]; then
+  sudo rm certs -fr
+fi
 mkdir -p "$SSL_DIR"
 
 # Generate our Private Key, CSR and Certificate
@@ -40,8 +42,8 @@ openssl x509 -req -days 1825 -in ${SSL_DIR}/cert.csr -CA ${SSL_DIR}/ca.crt -CAke
 
 # this is the user the container runs openldap as
 if [ $DO_CHANGEOWN == "yes" ]; then
-  chown 1001:1001 $SSL_DIR/*
-  chmod 400 $SSL_DIR/tls.key
+  sudo chown 1001:1001 $SSL_DIR/*
+  sudo chmod 400 $SSL_DIR/tls.key
 fi
 
 
