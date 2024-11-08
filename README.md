@@ -22,11 +22,6 @@ You can also run the prebuild images without any mounts
 docker run -p 389:389 ghcr.io/eugenmayer/ldaptestserver:bitnami-type1
 #or 
 docker run -p 389:389 ghcr.io/eugenmayer/ldaptestserver:bitnami-type2
-
-# DEPRECATED: you can use the old osixia images using
-docker run -p 389:389 ghcr.io/eugenmayer/ldaptestserver:osixia-type1
-#or 
-docker run -p 389:389 ghcr.io/eugenmayer/ldaptestserver:osixia-type2
 ```
 
 See the connection details under layout.
@@ -130,4 +125,4 @@ or memberOf will not work!
 
 ## Credits
 
-Now-days credits to the once again great chart of bitname [bitnami/openldap](https://hub.docker.com/r/bitnami/openldap) (and in the past, thanks to [osixia/docker-openldap](https://github.com/osixia/docker-openldap) for the great image)
+Now-days credits to the once again great docker image of Bitnami [bitnami/openldap](https://hub.docker.com/r/bitnami/openldap) (and in the past, thanks to [osixia/docker-openldap](https://github.com/osixia/docker-openldap))
