@@ -40,11 +40,9 @@ Server 2 has the port `20389` and the default domain example.org
 
 When you see the Users / Groups below, you need to replace the `<LDAP_BASE_DN>` with the domain, so either `dc=example,dc=org` or`dc=kontextwork-test,dc=de`
 
-The ldif's are templated, so you can change the container env variable `LDAP_DOMAIN` to have your own domain, or change the password.
-
 ### Type 1 Template
 
-`<LDAP_BASE_DN>` should be `dc=example,dc=org` if the default is not changed.
+BaseDN is `dc=example,dc=org`.
 
 ## Users
 - uid=user1id,ou=accounts,ou=base1,,<LDAP_BASE_DN>
@@ -69,7 +67,7 @@ with the following members
 
 ### Type 2 Template
 
-`<LDAP_BASE_DN>` should be `dc=kontextwork-test,dc=de` if the default is not changed.
+`<LDAP_BASE_DN>` is `dc=kontextwork-test,dc=de`.
 
 #### Users
 
