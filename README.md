@@ -55,15 +55,19 @@ Passwords do match the the `uid`, so `user1` for the user `uid=user1,ou=accounts
 
 ## Groups
 
-We have one group
+We have two groups
 
 - cn=myservice,ou=groups,ou=base1,<LDAP_BASE_DN>
+- cn=specialservice,ou=groups,ou=base1,<LDAP_BASE_DN>
 
-with the following members
+first one with the following members
 
 - uid=user1id,ou=accounts,ou=base1,,<LDAP_BASE_DN>
 - uid=user2id,ou=accounts,ou=base1,<LDAP_BASE_DN>
 - uid=included1id,ou=accounts,ou=base2,<LDAP_BASE_DN>
+
+and second one with
+- uid=user1id,ou=accounts,ou=base1,,<LDAP_BASE_DN>
 
 ### Type 2 Template
 

@@ -127,3 +127,9 @@ cn: myservice
 uniqueMember: uid=user1id,ou=accounts,ou=base1,dc=example,dc=org
 uniqueMember: uid=user2id,ou=accounts,ou=base1,dc=example,dc=org
 uniqueMember: uid=included1id,ou=accounts,ou=base2,dc=example,dc=org
+
+dn: cn=specialservice,ou=groups,ou=base1,dc=example,dc=org
+objectClass: groupOfUniqueNames
+objectClass: top
+cn: specialservice
+uniqueMember: uid=user1id,ou=accounts,ou=base1,dc=example,dc=org
