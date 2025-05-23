@@ -4,4 +4,4 @@ services:
     # important so our TLS certificate includes our hostname
     container_name: ldap
     ports:
-      - 12389:389
+      - 12389:1389

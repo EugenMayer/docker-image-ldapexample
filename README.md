@@ -19,9 +19,9 @@ docker-compose up -d
 You can also run the prebuild images without any mounts
 
 ```bash
-docker run -p 389:389 ghcr.io/eugenmayer/ldaptestserver:bitnami-type1
+docker run -p 389:1389 ghcr.io/eugenmayer/ldaptestserver:bitnami-type1
 #or 
-docker run -p 389:389 ghcr.io/eugenmayer/ldaptestserver:bitnami-type2
+docker run -p 389:1389 ghcr.io/eugenmayer/ldaptestserver:bitnami-type2
 ```
 
 See the connection details under layout.

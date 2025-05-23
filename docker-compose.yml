@@ -1,6 +1,6 @@
 services:
   ldap1:
-    image: bitnami/openldap:2.6.8
+    image: bitnami/openldap:2.6.10
     # important so our TLS certificate includes our hostname
     container_name: ldap1
     hostname: ldap1
@@ -44,7 +44,7 @@ services:
 #      LDAP_PROXYPROTO_PORT_NUMBER: 30389
 #      LDAP_PROXYPROTO_LDAPS_PORT_NUMBER: 30636
   ldap2:
-    image: bitnami/openldap:2.6.8
+    image: bitnami/openldap:2.6.10
     # important so our TLS certificate includes our hostname
     container_name: ldap2
     hostname: ldap2
