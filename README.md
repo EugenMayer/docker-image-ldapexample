@@ -75,16 +75,16 @@ and second one with
 
 #### Users
 
-- uid=included1id,ou=accounts,ou=base1,<LDAP_BASE_DN>
-- uid=included2id,ou=accounts,ou=base1,<LDAP_BASE_DN>
-- uid=included3id,ou=accounts,ou=base1,<LDAP_BASE_DN>
-- uid=readonlyid,ou=other accounts,ou=base1,<LDAP_BASE_DN>
-- uid=includedMissingMailid,ou=accounts,ou=base1<LDAP_BASE_DN>
-- uid=excluded1id,ou=accounts,ou=base1,<LDAP_BASE_DN>
-- uid=excluded2id,ou=accounts,ou=base1,<LDAP_BASE_DN>
-- uid=included1id,ou=accounts,ou=base2,<LDAP_BASE_DN>
+- cn=included1,ou=accounts,ou=base1,<LDAP_BASE_DN>
+- cn=included2,ou=accounts,ou=base1,<LDAP_BASE_DN>
+- cn=included3,ou=accounts,ou=base1,<LDAP_BASE_DN>
+- cn=readonly,ou=other accounts,ou=base1,<LDAP_BASE_DN>
+- cn=includedMissingMail,ou=accounts,ou=base1<LDAP_BASE_DN>
+- cn=excluded1,ou=accounts,ou=base1,<LDAP_BASE_DN>
+- cn=excluded2,ou=accounts,ou=base1,<LDAP_BASE_DN>
+- cn=included1,ou=accounts,ou=base2,<LDAP_BASE_DN>
 
-Passwords do match the the `uid`, so `included1` for the user `uid=included1,ou=accounts,<LDAP_BASE_DN>` and so on.
+Passwords do match the the `cn`, so `included1` for the user `cn=included1,ou=accounts,<LDAP_BASE_DN>` and so on.
 
 #### Groups
 
