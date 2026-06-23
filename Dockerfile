@@ -1,4 +1,6 @@
-FROM bitnami/openldap:2.6
+FROM ghcr.io/eugenmayer/bitnami-openldap:2.6
+# the above is a clone of bitnamilegacy/openldap:2.6 which is a clone of bitnami/openldap:2.6
+# we just want to ensure broadcome does not suddenly unpublish those and the CI is broken
 
 ARG TEMPLATE_PATH=./data-template-type1-static.ldif
 ARG CERTS_PATH=./tls/certs
