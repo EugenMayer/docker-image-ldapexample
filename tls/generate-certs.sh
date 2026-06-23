@@ -2,26 +2,20 @@
 
 set -e
 
-if [ -z "$1" ]; then
-    echo "please pass the ip as the first parameter"
-    exit 1
-fi
-
-DO_CHANGEOWN=${2:-yes}
+DO_CHANGEOWN=${1:-yes}
 
 
-ip=$1
 # Specify where we will install
 # the xip.io certificate
 SSL_DIR=certs
 
 # Set our CSR variables
 SUBJ="
+commonName=localhost
 C=DE
 ST=Niedersachsen
 O=ExampleOrg
 localityName=HN
-commonName=$ip
 organizationalUnitName=IT
 emailAddress=info@company.tld
 "
@@ -33,12 +27,7 @@ if [ $DO_CHANGEOWN == "yes" ]; then
 fi
 mkdir -p "$SSL_DIR"
 
-# Generate our Private Key, CSR and Certificate
-# consul NEEDS a CA signed certificate, since we can only trust CAs but not certificates, running into
-# consul: error getting server health from "consulserver": rpc error getting client: failed to get conn: x509: certificate signed by unknown authority (possibly because of "crypto/rsa: verification error" while trying to verify candidate authority certificate "127.0.0.1")
-openssl req -nodes -days 1825 -x509 -newkey rsa:2048 -keyout ${SSL_DIR}/ca.key -out ${SSL_DIR}/ca.crt -subj "$(echo -n "$SUBJ" | tr "\n" "/")"
-openssl req -nodes -newkey rsa:2048 -keyout ${SSL_DIR}/tls.key -out ${SSL_DIR}/cert.csr -subj "$(echo -n "$SUBJ" | tr "\n" "/")"
-openssl x509 -req -days 1825 -in ${SSL_DIR}/cert.csr -CA ${SSL_DIR}/ca.crt -CAkey ${SSL_DIR}/ca.key -CAcreateserial -out ${SSL_DIR}/cert.crt
+openssl req -x509 -newkey rsa:4096 -sha256 -days 1825 -keyout ${SSL_DIR}/tls.key -out ${SSL_DIR}/cert.crt -nodes  -subj "$(echo -n "$SUBJ" | tr "\n" "/")" -addext "subjectAltName=DNS:localhost,DNS:ldap1,DNS:ldap2,IP:127.0.0.1"
 
 # this is the user the container runs openldap as
 if [ $DO_CHANGEOWN == "yes" ]; then
